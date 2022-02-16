@@ -37,7 +37,7 @@ $WEBSITE['HOSTING']['TEMPLATES']         = 'D:/Online/Offline/courier.business/T
 // /* start manual domain configuration 
 $WEBSITE['DOMAIN']['ROOT']      = 'courier.business/';
 $WEBSITE['DOMAIN']['SITE']      = 'http://courier.business/';
-$WEBSITE['DOMAIN']['ASSETS']    = 'http://assets.senimandigital.kom';
+$WEBSITE['DOMAIN']['ASSETS']    = 'http://assets.senimandigital.kom/';
 $WEBSITE['DOMAIN']['ANGGOTA']   = 'http://courier.business/anggota/';
 $WEBSITE['DOMAIN']['GAMBAR']    = 'http://courier.business/gambar/';
 $WEBSITE['DOMAIN']['TEMPLATES'] = 'http://courier.business/Templates/';
@@ -852,16 +852,74 @@ if ($_GET['system']['file'] == 'filemtime') {
 exit;
 }
 
+// /* <-- @ Awal Baris jika ingin memodifikasi html sebelum dikirim ke browser klient
+if ($_GET['form']['builder'] == "master") {
+ob_start();
+echo '<table><tr><td role="article" valign="top"><section><h3>'. $WEBSITE['DOMAIN']['SUB'] . $_SERVER['SCRIPT_NAME'] .'</h3>';
+include $WEBSITE['HOSTING']['TEMPLATES'] ."php/data_field_master.php";
+echo '</section></td><td role="aside">';
+include $WEBSITE['HOSTING']['TEMPLATES'] ."php/menu_samping.php";
+echo '</td></tr></table>';
+$WEBSITE['SCRIPT']['HTML'] =  ob_get_contents(); ob_end_clean();
+define('senimandigital', true); goto sendhtml;
+}
+
+if ( in_array($_GET['form']['builder'], array("edit", "update")) ) {
+ob_start();
+
+include $WEBSITE['HOSTING']['TEMPLATES'] ."php/data_field_edit.php";
+$WEBSITE['SCRIPT']['HTML'] =  ob_get_contents(); ob_end_clean();
+define('senimandigital', true); goto sendhtml;
+}
+if ( in_array($_GET['form']['builder'], array("tambah", "insert")) ) {
+ob_start();
+echo '<table><tr><td role="article" valign="top"><section><h3>'. $WEBSITE['DOMAIN']['SUB'] . $_SERVER['SCRIPT_NAME'] .'</h3>';
+include $WEBSITE['HOSTING']['TEMPLATES'] .'php/deskripsi.php';
+include $WEBSITE['HOSTING']['TEMPLATES'] ."php/data_field_tambah.php";
+echo '</section></td></tr></table>';
+$WEBSITE['SCRIPT']['HTML'] =  ob_get_contents(); ob_end_clean();
+define('senimandigital', true); goto sendhtml;
+}
+
+define('senimandigital', true);
+ob_start();
+// if   (strtolower($_SERVER['SCRIPT_FILENAME']) == strtolower($WEBSITE['HOSTING']['ROOT'] .'index.php')) { include $WEBSITE['HOSTING']['TEMPLATES'] .'php/home.php';  } else { include $_SERVER['SCRIPT_FILENAME']; }
+include $_SERVER['SCRIPT_FILENAME'];
+$WEBSITE['SCRIPT']['HTML'] = ob_get_contents(); ob_end_clean();
+
 if   (file_exists($_SERVER['DOCUMENT_ROOT'] .'/Templates/php/index.php')) {
           include $_SERVER['DOCUMENT_ROOT'] .'/Templates/php/index.php'; }
 else { include $WEBSITE['HOSTING']['TEMPLATES'] .'php/index.php'; }
 
-// aktifkan komentar jika ingin memodifikasi html sebelum dikirim ke browser klient
-define('senimandigital', true);
-ob_start();
-if (strtolower($_SERVER['SCRIPT_FILENAME']) == strtolower($WEBSITE['HOSTING']['ROOT'] .'index.php')) {
-include $WEBSITE['HOSTING']['TEMPLATES'] .'php/home.php';  } else { include $_SERVER['SCRIPT_FILENAME']; }
-$WEBSITE['SCRIPT']['HTML'] = ob_get_contents(); ob_end_clean();
+preg_match_all('%<section>\r\n<h3>DESCRIPTION</h3>.*?</section>%s', $WEBSITE['SCRIPT']['HTML'], $replace_html);
+if ($replace_html[0][0]) {
+$_SERVER['SCRIPT_DIRNAME'] = dirname($_SERVER['SCRIPT_FILENAME']);
+if      (file_exists($_SERVER['SCRIPT_DIRNAME'] .'/menu_samping.php')) {
+ob_start(); include $_SERVER['SCRIPT_DIRNAME'] . '/menu_samping.php'; $menu_samping = ob_get_contents(); ob_end_clean();
+$WEBSITE['SCRIPT']['HTML'] = str_replace($replace_html[0][0], $menu_samping, $WEBSITE['SCRIPT']['HTML']);
+} elseif(file_exists($_SERVER['SCRIPT_DIRNAME'] .'/Templates/php/menu_samping.php')) {
+ob_start(); include $_SERVER['SCRIPT_DIRNAME'] . '/Templates/php/menu_samping.php'; $menu_samping = ob_get_contents(); ob_end_clean();
+$WEBSITE['SCRIPT']['HTML'] = str_replace($replace_html[0][0], $menu_samping, $WEBSITE['SCRIPT']['HTML']);
+}
+}
+
+preg_match_all('%<section form="komentar">.*?</section>%s', $WEBSITE['SCRIPT']['HTML'], $replace_html);
+if ($replace_html[0][0]) {
+$_SERVER['SCRIPT_DIRNAME'] = dirname($_SERVER['SCRIPT_FILENAME']);
+if      (file_exists($_SERVER['SCRIPT_DIRNAME'] .'/menu_samping.php')) {
+ob_start(); include $_SERVER['SCRIPT_DIRNAME'] . '/menu_samping.php'; $menu_samping = ob_get_contents(); ob_end_clean();
+$WEBSITE['SCRIPT']['HTML'] = str_replace($replace_html[0][0], $menu_samping, $WEBSITE['SCRIPT']['HTML']);
+} elseif(file_exists($_SERVER['SCRIPT_DIRNAME'] .'/Templates/php/menu_samping.php')) {
+ob_start(); include $_SERVER['SCRIPT_DIRNAME'] . '/Templates/php/menu_samping.php'; $menu_samping = ob_get_contents(); ob_end_clean();
+$WEBSITE['SCRIPT']['HTML'] = str_replace($replace_html[0][0], $menu_samping, $WEBSITE['SCRIPT']['HTML']);
+}
+}
+
+preg_match_all('%\[rs\]`(cms_versi)`.`(cms_versi_judul)`\[rs\]%s', $WEBSITE['SCRIPT']['HTML'], $replace_html);
+foreach($replace_html[0] as $key => $value ){
+eval('$replace_html["replace"][$key] = $row_'. $replace_html[1][$key] .'["'. $replace_html[2][$key] .'"];');
+if ($replace_html["replace"][$key]) $WEBSITE['SCRIPT']['HTML'] = str_replace($replace_html[0], $replace_html['replace'], $WEBSITE['SCRIPT']['HTML']);
+} 
 
 preg_match_all('~<!-- include_form "(.*?)" "(.*?)" -->~', $WEBSITE['SCRIPT']['HTML'], $replace);
 if (isset($replace[1][0])) {
@@ -886,31 +944,74 @@ $FORMULIR .= '</table>' . $FORM[3][0];
 $WEBSITE['SCRIPT']['HTML'] = str_replace($replace[0], $FORMULIR, $WEBSITE['SCRIPT']['HTML']);
 }
 
-$FORMULIR  = $FORM[1][0] . '<table>';
-$dom = new DOMDocument();   $dom->loadHTML($FORM[0][0]);   $xpath = new DOMXPath($dom);
-foreach(array_intersect($FOR[1], $INPUT[1]) as $key => $value) {
-  $FORMULIR .= '<tr><td>'
-            .  $dom->saveHTML($xpath->query('//*[@for="'. $value.'"]')->item(0))
-			.  $dom->saveHTML($xpath->query('//*[@name="'. $value.'"]')->item(0))
-            .  '</td></tr>';
+if (isset($_GET['magic']['html']['templates']) && file_exists($WEBSITE['HOSTING']['TEMPLATES'] ."php/". $_GET['magic']['html']['templates'] .".php" )) { ob_start();
+   include $WEBSITE['HOSTING']['TEMPLATES'] ."php/". $_GET['magic']['html']['templates'] .".php";
+$WEBSITE['SCRIPT']['HTML'] =  ob_get_contents(); ob_end_clean(); define('senimandigital', true);
 }
-$FORMULIR .= $dom->saveHTML($xpath->query('//caption[@align="bottom"]')->item(0));
-$FORMULIR .= '</table>' . $FORM[3][0];
 
-$WEBSITE['SCRIPT']['HTML'] = str_replace($replace[0], $FORMULIR, $WEBSITE['SCRIPT']['HTML']);
+if (isset($_GET['magic']['html']['sitemap'])) { ob_start();
+   include $WEBSITE['HOSTING']['TEMPLATES'] ."php/sitemap.php";
+$WEBSITE['SCRIPT']['HTML'] =  ob_get_contents(); ob_end_clean(); define('senimandigital', true);
+}
+
+if (isset($_GET['magic']['iframe']['komentar'])) { ob_start();
+   include $WEBSITE['HOSTING']['ROOT'] .'Templates/php/_floater.php';
+$WEBSITE['SCRIPT']['HTML'] =  ob_get_contents(); ob_end_clean(); define('senimandigital', true); 
+}
+
+sendhtml: mysql_close($senimandigital);
+// Koneksi dengan database berakhir disini, kode selanjutnya dimaksudkan untuk memanipulasi css, dom, json dan xml sebelum dikirim ke browser.
+
+if (isset($_GET['popup'])) {
+ $dom = new DOMDocument();     $dom->loadHTML($WEBSITE['SCRIPT']['HTML']);   $xpath = new DOMXPath($dom);
+ $WEBSITE['SCRIPT']['HTML']  = str_replace($dom->saveHTML($xpath->query('//td[@role="aside"]')->item(0)), '', $dom->saveHTML($xpath->query('/')->item(0)));
+}
+
 if (isset($_GET['dom'])) {
  $dom = new DOMDocument();    $dom->loadHTML($WEBSITE['SCRIPT']['HTML']);   $xpath = new DOMXPath($dom);
  $WEBSITE['SCRIPT']['HTML'] = $dom->saveHTML($xpath->query('//td[@role="article"]')->item(0));
 }
-if (isset($_GET['popup'])) {
- $dom = new DOMDocument();     $dom->loadHTML($WEBSITE['SCRIPT']['HTML']);   $xpath = new DOMXPath($dom);
- $WEBSITE['SCRIPT']['HTML']  = str_replace($dom->saveHTML($xpath->query('//td[@role="aside"]')->item(0)),
-                                       '', $dom->saveHTML($xpath->query('/')->item(0)));
+
+
+if (substr($_SERVER['HTTP_HOST'], -4) == '.kom') {
+$WEBSITE['TEMPLATE']['HEADER'] = str_replace('senimandigital.com' , 'senimandigital.kom', $WEBSITE['TEMPLATE']['HEADER']);
+$WEBSITE['SCRIPT']['HTML']     = str_replace('senimandigital.com' , 'senimandigital.kom', $WEBSITE['SCRIPT']['HTML']);
+$WEBSITE['SCRIPT']['FOOTER']   = str_replace('senimandigital.com' , 'senimandigital.kom', $WEBSITE['SCRIPT']['FOOTER']);
+} elseif (substr($_SERVER['HTTP_HOST'], -4) == '.com') {
+$WEBSITE['TEMPLATE']['HEADER'] = str_replace('senimandigital.kom' , 'senimandigital.com', $WEBSITE['TEMPLATE']['HEADER']);
+$WEBSITE['SCRIPT']['HTML']     = str_replace('senimandigital.kom' , 'senimandigital.com', $WEBSITE['SCRIPT']['HTML']);
+$WEBSITE['SCRIPT']['FOOTER']   = str_replace('senimandigital.kom' , 'senimandigital.com', $WEBSITE['SCRIPT']['FOOTER']);
 }
 
-echo $WEBSITE['SCRIPT']['HTML'];
+/*
+preg_match_all('~<textarea.*?data-format="([a-z-]+)".*?mode="(.*?)">~', $WEBSITE['SCRIPT']['HTML'], $match);
+if ($match[1][0]) { 
+$WEBSITE['SCRIPT']['HEADER'] = '<link  href="http://assets.senimandigital.kom/codemirror/5.40.0/lib/codemirror.css" rel="stylesheet">
+<script src="'. $WEBSITE['DOMAIN']['ASSETS'] .'codemirror/5.40.0/lib/codemirror.js"></script>';
+foreach (array_unique($match[1]) as $key => $value) {
+$WEBSITE['SCRIPT']['HEADER'] .= '<script src="'. $WEBSITE['DOMAIN']['ASSETS'] .'codemirror/5.40.0/mode/'. $match[1][$key] .'/'. $match[1][$key] .'.js"></script> ';
+}
+$WEBSITE['SCRIPT']['HEADER'] .= '<script src="'. $WEBSITE['DOMAIN']['ASSETS'] .'codemirror/5.40.0/mode/css/css-jsfiddle.js"></script> ';
+$WEBSITE['SCRIPT']['HEADER'] .= '<script src="'. $WEBSITE['DOMAIN']['ASSETS'] .'codemirror/5.40.0/mode/javascript/javascript.js"></script> ';
+$WEBSITE['SCRIPT']['HEADER'] .= '<script src="'. $WEBSITE['DOMAIN']['ASSETS'] .'codemirror/5.40.0/mode/xml/xml.js"></script> ';
+$WEBSITE['SCRIPT']['HEADER'] .= '<script src="'. $WEBSITE['DOMAIN']['ASSETS'] .'codemirror/5.40.0/mode/clike/clike.js"></script> ';
+$WEBSITE['SCRIPT']['HEADER'] .= '<script src="'. $WEBSITE['DOMAIN']['ASSETS'] .'codemirror/5.40.0/mode/php/php.js"></script> ';
+$WEBSITE['TEMPLATE']['HEADER'] = str_replace('<script position="head"></script>', $WEBSITE['SCRIPT']['HEADER'], $WEBSITE['TEMPLATE']['HEADER']);
+} // Akhir baris jika ingin memodifikasi html sebelum dikirim ke browser klient */
+
+foreach ($WEBSITE['DOMAIN'] as $key => $value) { $listdomain[] = '<?php echo $WEBSITE[\'DOMAIN\'][\''. $key .'\']; ?>'; }
+if (preg_match_all('%Dreamweaver%s', $_SERVER['HTTP_USER_AGENT'], $match)) {
+    echo preg_replace('%<header>.*?</header>%s', '', str_replace($listdomain, $WEBSITE['DOMAIN'],$WEBSITE['TEMPLATE']['HEADER'] . $WEBSITE['SCRIPT']['HTML'] . $WEBSITE['SCRIPT']['FOOTER']));
+	//echo $WEBSITE['SCRIPT']['HTML'];
+} else {
+echo str_replace($listdomain, $WEBSITE['DOMAIN'],$WEBSITE['TEMPLATE']['HEADER'] . $WEBSITE['SCRIPT']['HTML'] . $WEBSITE['TEMPLATE']['FOOTER'] . $WEBSITE['SCRIPT']['FOOTER']);
+}
+//echo microtime(true) - $microtime_start; echo '<br>'. (memory_get_usage() - $ram) / 1024;
 
 endsenimandigital:
 unset($WEBSITE, $script, $match, $replace);
 exit;
+?>
+<?php $source = ob_get_contents(); ob_end_clean(); echo $source;  
+mysql_free_result($ajax_cata_count); 
 ?>
