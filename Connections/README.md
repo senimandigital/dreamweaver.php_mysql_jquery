@@ -5,10 +5,36 @@ Nama connection harus "senimandigital", jika anda menggunakan nama lain, maka sc
 
 Kemudian ada mekanisme redirect yang unik tertanam pada website http://senimandigital.com itu sendiri untuk membawa anda menuju solusi yang anda butuhkan.
 
+# Abstrak
+Programmer memang suka membanding-bandingkan Framework, untuk mnemukan mana yang terbaik dan itu bisa dimaklumi karena memang akan selalu ada yang lebih baik. Tapi dalam hal membandingkan ini sebaiknya kita punya standar yang benar terlebih dahulu tentang apa yang kita butuhkan.
+
+Jika kita hanya membandingkan framework dari bahasa yang digunakan oleh marketing, kita tidak akan mendapatkan apa yang paling kita butuhkan, secara umum framework itu bisa dibandingkan dari 4 hal, yaitu: arsitektur, fitur, mekanisme dan segmentasi.
+
+Hal yang menarik dari suatu framework untuk digali terkait arsitektur adalah:
+1. Ditulis dengan Pattern, sehingga mendukung pengembangan dengan penerapan Artificial Intelligence.
+2. Desain struktur database yang kooperatif, yang arti-nya struktur database dan kode program bisa di find dan replace sekaligus dengan resiko yang minimum.
+3. algoritma didesain untuk dapat bekerja secara multi domain atau multi subdomain.
+4. Standard Config, yaitu file konfigurasi yang di Incude, Encode dan Decode sekaligus.
+
+Hal yang menarik dari suatu framework untuk digali terkait Fitur adalah:
+1. Magic Parameter (Backend)
+FItur yang disediakan framework yang bersifat global untuk mengeliminasi koding berulang, contoh
+- ?Logout : Ini adalah contoh paling sederhana dari yang namanya magic parameter, dimanapun lokasi user berada programmer hanya perlu menyediakan sebuah tag
+<a href="?Logout"> Maka seluruh session akan dihapus.
+- ?magic[image][chaptcha] : dengan menambahkan parameter ini, html render dibatalkan ( di exit; ) dan server mengirimkan gambar chapcha ke browser
+- ?magic[image][paste] : dengan menambahkan parameter ini, html render dibatalkan ( di exit; ) dan server mengirimkan sebuah dialog yang berfungsi untuk mem-paste image.
+- ?magic[image][upload] : dengan menambahkan parameter ini, html render dibatalkan ( di exit; ) dan server mengirimkan sebuah dialog yang berfungsi untuk mengupload image.
+- ?magic[image][text][rotate]=Judul Colom Table : 
+- ?magic[json]=recordset_name : 
+
+2. Magic Attribute (Frontend)
+
+# Content
+
 ## Fitur Magic
 Anda mungkin bertanya-tanya seberapa keren sih sebenarnya Maggic Conection ini, bisakah dibandingkan dengan framework yang sudah populer seperti Laravel Livewire misal-nya... ? Tidak perlu berpanjang lebar, anda bisa membandingkan sendiri apa yang diberi oleh Senimandigital Magic Connection ini:
 
-### Magic Captcha
+### Magic Image Captcha
 Ketika ingin membuat aplikasi, hal pertama yang ingin kita ketahui adalah bagaimana membuat kode captcha, dengan Senimandigital Magic Connections anda hanya perlu mengetikan pada url atau menambahkan url pada parameter:
 ```
 ?magic[image][captcha]
@@ -16,6 +42,10 @@ Ketika ingin membuat aplikasi, hal pertama yang ingin kita ketahui adalah bagaim
 Maka pada browser anda akan melihat sebuah gambar yang berisi beberapa angka atau hurup, alamat gambar tersebut bisa anda masukan pada atribute HTML img. sedangkan data angka yang ditampilkan dapat anda akses / tersimpan pada: variabel global $\_SESSION['CAPTCHA']
 
 Bagaimana... ? sampai disini sudah keliatan keren-nya... ? mari kita lanjutkan ke virut lain-nya.
+
+### Magic Image Paste
+
+### Magic Image Upload
 
 ### Magic Image Rotate
 Anda pernah lihat, sebuah tabel yang komplek, dimana didalam tabel tersebut ada string yang dirotasi dimana text tersebut bisa rata tengah baik rata tengah dari atas bawah, maupun rata tengah dari kiri dan kanan. Anda bisa saja membuat text seperti itu menggunakan Javascript dan SVG, tapi jelas konfigurasi-nya tidak akan mudah dan membutuhkan banyak script. Tetapi jika menggunakan Senimandigital Connections. Anda cukup mendefinisikan request melalui url, seperti ini:
