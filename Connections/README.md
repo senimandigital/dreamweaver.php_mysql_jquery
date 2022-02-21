@@ -22,7 +22,7 @@ FItur yang disediakan framework yang bersifat global untuk mengeliminasi koding 
 - ?Logout : Ini adalah contoh paling sederhana dari yang namanya magic parameter, dimanapun lokasi user berada programmer hanya perlu menyediakan sebuah tag
 &lt;a href="?Logout"> Maka seluruh session akan dihapus.
 - ?magic[image][chaptcha] : dengan menambahkan parameter ini, html render dibatalkan ( di exit; ) dan server mengirimkan gambar chapcha ke browser
-- ?magic[image][paste] : dengan menambahkan parameter ini, html render dibatalkan ( di exit; ) dan server mengirimkan sebuah dialog yang berfungsi untuk mem-paste image.
+- ?magic[image][paste] : dengan menambahkan parameter ini, html render dibatalkan ( di exit; ) dan server mengirimkan sebuah dialog yang berfungsi untuk mem-paste image / mengambil gambar terakhir dari clipboard.
 - ?magic[image][upload] : dengan menambahkan parameter ini, html render dibatalkan ( di exit; ) dan server mengirimkan sebuah dialog yang berfungsi untuk mengupload image.
 - ?magic[image][text][rotate]=Judul Colom Table : 
 - ?magic[json]=recordset_name : 
@@ -51,13 +51,17 @@ Bagaimana... ? sampai disini sudah keliatan keren-nya... ? mari kita lanjutkan k
 ```
 ?magic[image][capture]=http/https://domain.name
 ```
-### Magic Image Capture Webcam
+### Magic Image Capture Barcode
 ```
 ?magic[image][capture]=barcode
 ```
-### Magic Image Capture URL
+### Magic Image Capture QRCode
 ```
 ?magic[image][capture]=qrcode
+```
+### Magic Image Avatar
+```
+?magic[image][avatar]=keyword
 ```
 ### Magic Image Paste
 ```
