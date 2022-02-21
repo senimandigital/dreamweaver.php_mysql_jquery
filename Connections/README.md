@@ -20,7 +20,7 @@ Hal yang menarik dari suatu framework untuk digali terkait Fitur adalah:
 1. Magic Parameter (Backend)
 FItur yang disediakan framework yang bersifat global untuk mengeliminasi koding berulang, contoh
 - ?Logout : Ini adalah contoh paling sederhana dari yang namanya magic parameter, dimanapun lokasi user berada programmer hanya perlu menyediakan sebuah tag
-<a href="?Logout"> Maka seluruh session akan dihapus.
+&lt;a href="?Logout"> Maka seluruh session akan dihapus.
 - ?magic[image][chaptcha] : dengan menambahkan parameter ini, html render dibatalkan ( di exit; ) dan server mengirimkan gambar chapcha ke browser
 - ?magic[image][paste] : dengan menambahkan parameter ini, html render dibatalkan ( di exit; ) dan server mengirimkan sebuah dialog yang berfungsi untuk mem-paste image.
 - ?magic[image][upload] : dengan menambahkan parameter ini, html render dibatalkan ( di exit; ) dan server mengirimkan sebuah dialog yang berfungsi untuk mengupload image.
@@ -43,11 +43,31 @@ Maka pada browser anda akan melihat sebuah gambar yang berisi beberapa angka ata
 
 Bagaimana... ? sampai disini sudah keliatan keren-nya... ? mari kita lanjutkan ke virut lain-nya.
 
+### Magic Image Capture Webcam
+```
+?magic[image][capture]=webcam
+```
+### Magic Image Capture URL
+```
+?magic[image][capture]=http/https://domain.name
+```
+### Magic Image Capture Webcam
+```
+?magic[image][capture]=barcode
+```
+### Magic Image Capture URL
+```
+?magic[image][capture]=qrcode
+```
 ### Magic Image Paste
-
+```
+?magic[image][paste]=/directory/filename.ext
+```
 ### Magic Image Upload
-
-### Magic Image Rotate
+```
+?magic[image][upload]=/directory/filename.ext
+```
+### Magic Image Text Rotate
 Anda pernah lihat, sebuah tabel yang komplek, dimana didalam tabel tersebut ada string yang dirotasi dimana text tersebut bisa rata tengah baik rata tengah dari atas bawah, maupun rata tengah dari kiri dan kanan. Anda bisa saja membuat text seperti itu menggunakan Javascript dan SVG, tapi jelas konfigurasi-nya tidak akan mudah dan membutuhkan banyak script. Tetapi jika menggunakan Senimandigital Connections. Anda cukup mendefinisikan request melalui url, seperti ini:
 ```
 ?magic[image][text][rotate]=String suka suka anda.
