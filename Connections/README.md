@@ -18,17 +18,19 @@ Hal yang menarik dari suatu framework untuk digali terkait arsitektur adalah:
 
 Hal yang menarik dari suatu framework untuk digali terkait Fitur adalah:
 1. Magic Parameter (Backend)
-FItur yang disediakan framework yang bersifat global untuk mengeliminasi koding berulang, contoh
-- ?Logout : Ini adalah contoh paling sederhana dari yang namanya magic parameter, dimanapun lokasi user berada programmer hanya perlu menyediakan sebuah tag
+Fitur yang disediakan framework yang bersifat global untuk mengeliminasi koding berulang, contoh
+    - ?Logout : Ini adalah contoh paling sederhana dari yang namanya magic parameter, dimanapun lokasi user berada programmer hanya perlu menyediakan sebuah tag
 &lt;a href="?Logout"> Maka seluruh session akan dihapus.
-- ?magic[image][chaptcha] : dengan menambahkan parameter ini, html render dibatalkan ( di exit; ) dan server mengirimkan gambar chapcha ke browser
-- ?magic[image][paste] : dengan menambahkan parameter ini, html render dibatalkan ( di exit; ) dan server mengirimkan sebuah dialog yang berfungsi untuk mem-paste image / mengambil gambar terakhir dari clipboard.
-- ?magic[image][upload] : dengan menambahkan parameter ini, html render dibatalkan ( di exit; ) dan server mengirimkan sebuah dialog yang berfungsi untuk mengupload image.
-- ?magic[image][text][rotate]=Judul Colom Table : 
-- ?magic[json]=recordset_name : 
+    - ?magic[image][chaptcha] : dengan menambahkan parameter ini, html render dibatalkan ( di exit; ) dan server mengirimkan gambar chapcha ke browser
+    - ?magic[image][paste] : dengan menambahkan parameter ini, html render dibatalkan ( di exit; ) dan server mengirimkan sebuah dialog yang berfungsi untuk mem-paste image / mengambil gambar terakhir dari clipboard.
+    - ?magic[image][upload] : dengan menambahkan parameter ini, html render dibatalkan ( di exit; ) dan server mengirimkan sebuah dialog yang berfungsi untuk mengupload image.
+    - ?magic[image][text][rotate]=Judul Colom Table : 
+    - ?magic[json]=recordset_name : 
 
 2. Magic Attribute (Frontend)
-
+Fitur yang disediakan framework yang bersifat global untuk mengeliminasi koding berulang, contoh:
+    - currency="rupiah" : Memformat data kedalam format penulisan rupiah
+    - currency="currency" : Memformat data kedalam format penulisan uang, tanpa symbol khusus
 # Content
 
 ## Fitur Magic
