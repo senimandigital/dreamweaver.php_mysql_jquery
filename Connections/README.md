@@ -1,12 +1,12 @@
 # Senimandigital Magic Connections
 Cara menggunakannya sangat mudah, ketika anda sudah mengkonfigurasi database pada dreamweaver, dengan nama connection "senimandigital" maka timpa file senimandigital.php dengan file ini lalu konfigurasi ulang username dan password database.
 
-Nama connection harus "senimandigital", jika anda menggunakan nama lain, maka script ini menjadi tidak bermanfaat, jika menggunakan nama lain maka teknologi-nya akan menjadi tidak berjalan dengan benar. jika anda mengganti atau mereplace kata senimandigital, maka source ini tidak bisa membantu mencari solusi pada website http://senimandigital.com ada keterikatan penamaan ini dengan website http://senimandigital.com.
+Nama connection harus "senimandigital", jika anda menggunakan nama lain, maka script ini menjadi tidak bermanfaat, jika menggunakan nama lain maka teknologi-nya akan menjadi tidak berjalan dengan benar. jika anda mengganti atau mereplace kata senimandigital, maka source ini tidak bisa membantu mencari solusi pada website https://senimandigital.com ada keterikatan penamaan ini dengan website https://senimandigital.com.
 
-Kemudian ada mekanisme redirect yang unik tertanam pada website http://senimandigital.com itu sendiri untuk membawa anda menuju solusi yang anda butuhkan.
+Kemudian ada mekanisme redirect yang unik tertanam pada website https://senimandigital.com itu sendiri untuk membawa anda menuju solusi yang anda butuhkan.
 
 # Abstrak
-Programmer memang suka membanding-bandingkan Framework, untuk mnemukan mana yang terbaik dan itu bisa dimaklumi karena memang akan selalu ada yang lebih baik. Tapi dalam hal membandingkan ini sebaiknya kita punya standar yang benar terlebih dahulu tentang apa yang kita butuhkan.
+Programmer memang suka membanding-bandingkan Framework, untuk mnemukan mana yang terbaik dan itu bisa dimaklumi karena memang akan selalu ada yang lebih baik belum lagi fakta bahwa tidak seorangpun mau untuk terjebak di jalan dan lingkungan yang salah. Tapi dalam hal membandingkan ini sebaik-nya kita punya standar yang benar terlebih dahulu tentang apa yang kita butuhkan.
 
 Jika kita hanya membandingkan framework dari bahasa yang digunakan oleh marketing, kita tidak akan mendapatkan apa yang paling kita butuhkan, secara umum framework itu bisa dibandingkan dari 4 hal, yaitu: arsitektur, fitur, mekanisme dan segmentasi.
 
@@ -34,7 +34,13 @@ Fitur yang disediakan framework yang bersifat global untuk mengeliminasi koding 
 # Content
 
 ## Fitur Magic
-Anda mungkin bertanya-tanya seberapa keren sih sebenarnya Maggic Conection ini, bisakah dibandingkan dengan framework yang sudah populer seperti Laravel Livewire misal-nya... ? Tidak perlu berpanjang lebar, anda bisa membandingkan sendiri apa yang diberi oleh Senimandigital Magic Connection ini:
+Anda mungkin bertanya-tanya seberapa keren sih sebenarnya Magic Connection ini, bisakah dibandingkan dengan framework yang sudah populer seperti Laravel Livewire misal-nya... ? Tidak perlu berpanjang lebar, anda bisa membandingkan sendiri apa yang diberi oleh Senimandigital Magic Connection untuk kemudahan dalam pemrogramman:
+
+### Magic Email Reset
+Ketika pertama kali membuat aplikasi untuk penggunaan yang sebenar-nya, hal pertama yang perlu kita sediakan adalah fasilitas manajemen anggota. dan fitur penting dari data anggota adalah adanya fasilitas untuk mereset password via email.
+```
+?magic[email][reset][password]=target@email.com
+```
 
 ### Magic Image Captcha
 Ketika ingin membuat aplikasi, hal pertama yang ingin kita ketahui adalah bagaimana membuat kode captcha, dengan Senimandigital Magic Connections anda hanya perlu mengetikan pada url atau menambahkan url pada parameter:
