@@ -26,10 +26,15 @@ Hal yang menarik dari suatu framework untuk digali terkait arsitektur adalah:
 
 Anda beruntung, ketika sudah sampai pada halaman ini karena disini kita tidak akan belajar dan berbagi hal-hal tentang "Old" framework tapi disini kita lebih fokus berbicara tentang "New" dan "Next" framework, yang dimaksud dengan "Old" Framework adalah framework tanpa atau belum memiliki aturan penerapan konsep Magic dalam pembangunan aplikasi-nya. 
 
-Pertama-tama kita akan mendefinisikan klasifikasi algoritma aplikasi kedalam 3 kelompok atau istilah, yaitu:
+Pertama-tama kita akan mendefinisikan klasifikasi algoritma pembentuk aplikasi kedalam 3 kelompok atau istilah, yaitu:
 1. CLassic
+    Ini berarti aplikasi ditulis menggunakan atau mengikuti aturan paling dasar dari sebuah framework.
 2. Hybrid
+    Ini berarti algoritma dari aplikasi ditulis menggunakan tehnik campuran.
 3. Magic
+    Ini berarti algoritma dari aplikasi sudah ditulis mengikuti atau menerapkan konsep magic.
+    
+Anda boleh setuju boleh juga tidak setuju untuk istilah-istilah ini, karena ini hanya bersifat usulan. Tetapi daripada tidak punya istilah untuk klasifikasi algoritma, kenapa kita harus menolak penamaan dari ketiga klasifikasi yang diusulkan ini. Betul tidak bos ku!
 
 Hal yang menarik dari suatu framework untuk digali terkait Fitur adalah:
 1. Magic Parameter Backend
