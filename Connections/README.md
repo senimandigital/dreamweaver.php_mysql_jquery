@@ -80,6 +80,8 @@ Kita bisa menjadikan salah satu project sebagai template utama yang apabila reso
 ```
 ?magic[image][copy][default]=location target
 ```
+Kedua hal ini bisa dicapai dengan baik melalui penerapan tehnik magic hybrid.
+
 ### Magic Image Captcha
 Ketika ingin membuat aplikasi, hal pertama yang ingin kita ketahui adalah bagaimana membuat kode captcha, dengan Senimandigital Magic Connections anda hanya perlu mengetikan pada url atau menambahkan url pada parameter:
 ```
