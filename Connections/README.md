@@ -3,21 +3,36 @@ Cara menggunakannya sangat mudah, ketika anda sudah mengkonfigurasi database pad
 
 Nama connection harus "senimandigital", jika anda menggunakan nama lain, maka script ini menjadi tidak bermanfaat, jika menggunakan nama lain maka teknologi-nya akan menjadi tidak berjalan dengan benar. jika anda mengganti atau mereplace kata senimandigital, maka source ini tidak bisa membantu mencari solusi pada website https://senimandigital.com ada keterikatan penamaan ini dengan website https://senimandigital.com.
 
-Kemudian ada mekanisme redirect yang unik tertanam pada website https://senimandigital.com itu sendiri untuk membawa anda menuju solusi yang anda butuhkan.
+Kemudian ada mekanisme redirect yang unik tertanam pada website https://senimandigital.com itu sendiri untuk membawa anda menuju solusi yang anda butuhkan. Ini buka omong kosong, senimandigital adalah satu-satunya yang aktif mendukung pemrograman visual dengan berbagai tool yang pernah populer pada masa-nya, dan membuat tool-tool tersebut untuk tetap dapat dipakai pada era ini.
+
+Disamping satu-satunya yang serius mengembangkan tehnik Pemrogramman Visual khusus-nya dalam pemrogramman PHP, senimandigital juga merupakan satu-satunya provider framework yang fokus membuat website-nya untuk menghasilkan solusi terintegrasi dengan tool pemrograman, yang arti-nya bukan anda lagi yang harus buka browser kemudian mencari tutorial pada website penyedia framework, tetapi tugas pencarian soolusi itu sudah dipindahkan ke tool yang adan gunakan.
 
 # Abstrak
 Programmer memang suka membanding-bandingkan Framework, untuk mnemukan mana yang terbaik dan itu bisa dimaklumi karena memang akan selalu ada yang lebih baik belum lagi fakta bahwa tidak seorangpun mau untuk terjebak di jalan dan lingkungan yang salah. Tapi dalam hal membandingkan ini sebaik-nya kita punya standar yang benar terlebih dahulu tentang apa yang kita butuhkan.
 
-Jika kita hanya membandingkan framework dari bahasa yang digunakan oleh marketing, kita tidak akan mendapatkan apa yang paling kita butuhkan, secara umum framework itu bisa dibandingkan dari 4 hal, yaitu: arsitektur, fitur, mekanisme dan segmentasi.
+Jika kita hanya membandingkan framework dari bahasa yang digunakan oleh marketing atau pihak yang bermaksud mempromoisikan framework, kita tidak akan mendapatkan apa yang paling kita butuhkan, seorang promotor akan fokus menggali hal-hal positif dan mengembangkan teknik komunikasi marketing yang efektif dari sesuatu yang dalam hal ini "framework" yang dia promosikan.
+
+Secara umum framework itu bisa dibandingkan dari 4 hal, yaitu: arsitektur, fitur, mekanisme dan segmentasi.
 
 Hal yang menarik dari suatu framework untuk digali terkait arsitektur adalah:
-1. Ditulis dengan Pattern, sehingga mendukung pengembangan dengan penerapan Artificial Intelligence.
+1. Ditulis dengan Pattern, sehingga mendukung pengembangan dengan penerapan Artificial Intelligence. Tanpa Pattern penerapan Artificial Intelligence akan sulit diterapkan dalam proses pemrogramman.
 2. Desain struktur database yang kooperatif, yang arti-nya struktur database dan kode program bisa di find dan replace sekaligus dengan resiko yang minimum.
-3. algoritma didesain untuk dapat bekerja secara multi domain atau multi subdomain.
-4. Standard Config, yaitu file konfigurasi yang di Incude, Encode dan Decode sekaligus.
+3. Standard Config, yaitu file konfigurasi yang dapat di Incude, di Encode dan di Decode sekaligus.
+4. Algoritma didesain dan diimplementasikan untuk dapat bekerja secara multi domain atau multi subdomain.
+5. Algoritma didesain dan diimplementasikan agar bersifat modular.
+    
+    Saya setuju jika framework yang populer saat ini sudah bisa dikatakan bersifat modular, tapi apa artinya jika haya frameworknya yang bersifat modular sedangkan algoritma yang kita tulis atau aplikasi yang kita buat tidak memiliki sifat itu.
+    Entah anda memperhatikan atau tidak, ketika saya menjadwab berbagai petanyaan di group pemrogramman, saya memberikan jawaban dengan algoritma yang sudah bersifat modular,  Salah satu contoh penulisan algoritma javascript yang bersifat clean code atau modular bisa anda jumpai pada jawaban saya untuk pertanyaan ini: https://www.facebook.com/groups/codeigniter.id/?multi_permalinks=10160176355295337&comment_id=10160176427485337 algoritma yang saya tulis tersebut memang memiliki sifat clean code(Kode asli bersih, tidak di inject secara langsung dengan attribute "group"), kode tersebut juga memiliki sifat modular(DOM pertama-tama di transpormasi menggunakan javascript, untuk mengeksekusi kode javascript yang lain). Meski contoh algoritma ini bersifat Clean Code dan juga bersifat Modular, saya tidak akan menggunakan 2 bahasa itu untuk mempromosikan konsep programming-nya, karena istilah Clean Code ataupun istilah Modular sudah dikotori dengan berbagai praktek yang bersifat hybrid. Oleh karena itu, perlu untuk saya memperkenalkan istilah baru untuk algoritma jenis ini, seperti penggunaan istilah: Magic Algoritm/Algoritma Magic atau bisa juga dengan istilah Source Behavior/Source Pattern jika algoritma tersebut sudah ditulis dengan pattern(Bagian dari source code dapat di baca dan ditulis ulang oleh komputer).
+
+Anda beruntung, ketika sudah sampai pada halaman ini karena disini kita tidak akan belajar dan berbagi hal-hal tentang "Old" framework tapi disini kita lebih fokus berbicara tentang "New" dan "Next" framework, yang dimaksud dengan "Old" Framework adalah framework tanpa atau belum memiliki aturan penerapan konsep Magic dalam pembangunan aplikasi-nya. 
+
+Pertama-tama kita akan mendefinisikan klasifikasi algoritma aplikasi kedalam 3 kelompok atau istilah, yaitu:
+1. CLassic
+2. Hybrid
+3. Magic
 
 Hal yang menarik dari suatu framework untuk digali terkait Fitur adalah:
-1. Magic Parameter (Backend)
+1. Magic Parameter Backend
 Fitur yang disediakan framework yang bersifat global untuk mengeliminasi koding berulang, contoh
     - ?Logout : Ini adalah contoh paling sederhana dari yang namanya magic parameter, dimanapun lokasi user berada programmer hanya perlu menyediakan sebuah tag
 &lt;a href="?Logout"> Maka seluruh session akan dihapus.
@@ -27,10 +42,19 @@ Fitur yang disediakan framework yang bersifat global untuk mengeliminasi koding 
     - ?magic[image][text][rotate]=Judul Colom Table : 
     - ?magic[json]=recordset_name : 
 
-2. Magic Attribute (Frontend)
+2. Magic Transformation Backend
+
+3. Magic Hybrid Backend
+
+4. Magic Attribute (Frontend)
 Fitur yang disediakan framework yang bersifat global untuk mengeliminasi koding berulang, contoh:
     - currency="rupiah" : Memformat data kedalam format penulisan rupiah
     - currency="currency" : Memformat data kedalam format penulisan uang, tanpa symbol khusus
+
+5. Magic Hybrid Frontend
+
+6. Magic Transformation Frontend
+
 # Content
 
 ## Fitur Magic
@@ -39,7 +63,7 @@ Anda mungkin bertanya-tanya seberapa keren sih sebenarnya Magic Connection ini, 
 ### Magic Email Reset
 Ketika pertama kali membuat aplikasi untuk penggunaan yang sebenar-nya, hal pertama yang perlu kita sediakan adalah fasilitas manajemen anggota. dan fitur penting dari data anggota adalah adanya fasilitas untuk mereset password via email.
 ```
-?magic[email][reset][password]=target@email.com
+?magic[email][reset][password][link]=target@email.com
 ```
 
 ### Magic Image Captcha
