@@ -114,7 +114,25 @@ Anda pernah lihat, sebuah tabel yang komplek, dimana didalam tabel tersebut ada 
 ?magic[image][text][rotate]=String suka suka anda.
 ```
 Maka pada browser anda akan melihat sebuah gambar dengan tulisan "String suka suka anda", alamat gambar ini bisa anda sisipkan pada tag HTML img, kemudian gambar itu bisa anda letakan pada kolom tabel. anda tinggal atur pada tag <td> attribute <td align="center"> maka gambar tadi akan berada ditengah tanpa perlu lagi berurusan dengan javascript.
-  
+
+### Magic Dialog dan Popup
+Dialog dan Popup memiliki fungsi yang serupa tapi menghasilkan sesuatu menggunakan mekanisme yang desikit berbeda. Dialog identik dengan javascript, sedangkan Popup identik dengan fasilitas bahwaan browser.
+```
+?magic[dialog][map][google]=
+```
+    
+```
+?magic[dialog][map][leaflet]=
+```
+    
+```
+?magic[popup][map][google]=
+```
+    
+```
+?magic[popup][map][leaflet]=
+```
+
 Hari ini tulisannya, sampai disini dulu. jika mengerti php anda meriksa sendiri fitur magic apa saja yang tersedia pada Senimandigital Magic Connections ini. terimakasih
   
 salam senimandigital
