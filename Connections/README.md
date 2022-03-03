@@ -115,18 +115,17 @@ Anda pernah lihat, sebuah tabel yang komplek, dimana didalam tabel tersebut ada 
 ```
 Maka pada browser anda akan melihat sebuah gambar dengan tulisan "String suka suka anda", alamat gambar ini bisa anda sisipkan pada tag HTML img, kemudian gambar itu bisa anda letakan pada kolom tabel. anda tinggal atur pada tag <td> attribute <td align="center"> maka gambar tadi akan berada ditengah tanpa perlu lagi berurusan dengan javascript.
 
-### Magic Dialog dan Popup
-Dialog dan Popup memiliki fungsi yang serupa tapi menghasilkan sesuatu menggunakan mekanisme yang desikit berbeda. Dialog identik dengan javascript, sedangkan Popup identik dengan fasilitas bahwaan browser.
-```
-?magic[dialog][map][google]=
-```
-    
+## Magic Dialog dan Popup
+Dialog dan Popup memiliki fungsi yang serupa tapi menghasilkan sesuatu menggunakan mekanisme yang desikit berbeda. Dialog identik dengan javascript, sedangkan Popup identik dengan fasilitas bahwaan browser. Kemudian juga, dialog identik dengan Ajax sedangkan popup identik dengan iframe.
+
+### Magic Dialog Map
+Apabila kita menggunakan library, ada baiknya menyertakan nama libraary-nya juga, dengan cara ini kita tidak akan pusing dengan penamaan ketika menggunakan plugin alternative.
 ```
 ?magic[dialog][map][leaflet]=
 ```
     
 ```
-?magic[popup][map][google]=
+?magic[dialog-iframe][map][leaflet]=
 ```
     
 ```
