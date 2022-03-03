@@ -71,6 +71,15 @@ Ketika pertama kali membuat aplikasi untuk penggunaan yang sebenar-nya, hal pert
 ?magic[email][reset][password][link]=target@email.com
 ```
 
+### Magic Image Build
+Dalam membuat aplikasi programmer seringkali melakukan copy dan paste, program yang sudah jadi biasanya akan memanggil resource tertentu seperi file gambar, apabila file ini tidak ditemukan, maka backend akan membuat gambar default, sehingga mengeliminasi request berulang dari sisi browser.
+```
+?magic[image][build][undefined]=location
+```
+Kita bisa menjadikan salah satu project sebagai template utama yang apabila resource tidak ditemukan pada proyek yang baru, maka file akan di copy otomatis oleh aplikasi dari project yang lama.
+```
+?magic[image][copy][default]=location target
+```
 ### Magic Image Captcha
 Ketika ingin membuat aplikasi, hal pertama yang ingin kita ketahui adalah bagaimana membuat kode captcha, dengan Senimandigital Magic Connections anda hanya perlu mengetikan pada url atau menambahkan url pada parameter:
 ```
