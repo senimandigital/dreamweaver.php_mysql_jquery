@@ -10,7 +10,7 @@ sedangkan apabila menggunakan div, kita perlu memeriksa satu persatu class name 
 #### Table Design Accurdion Horizontal
 Berikut ini adalah contoh kode program untuk membuat element Accurdion menggunakan Senimandigital CMS, dan anda tidak lagi perlu memikirkan css dan javascript-nya karena itu sudah di handle
 secara otomatis oleh Senimandigital CMS. Kecuali anda memang ingin merubah konfigurasi barulah perlu untuk membuka file CSS maupun file Javascript.
-```
+```html
 <table design="accurdion_horizontal">
 <tr>
   <th><img src="?magic[image][rotate][text]=Control 1"/></th>
