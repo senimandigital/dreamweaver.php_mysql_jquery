@@ -53,20 +53,17 @@ sedangkan untuk hierarki-nya kita membuat data dengan karakter pembatas: "/" seh
 Dengan penamaan level akses seperti diatas, kita bisa langsung menyimpan nilai level akses pengguna yang sedang login pada variabel session, contoh:
 
 ```
-$_SESSION['account_level'] = 'administrator'
+$_SESSION['account_group'] = 'administrator'
 ```
 Dengan nilai level akses pada seesion, kita bisa langgung menggunakan nilai tersebut untuk mengarahkannya pada file php yang sesuai, contoh:
 ```
-include $_SESSION['account_level'] .'/index.php';
+include $_SESSION['account_group'] .'/index.php';
 ```
-
-
-http://cms.senimandigital.com/index.php/dreamweaver/1.0.0/database/
+Dengan cara ini, kita tidak perlu lagi memikirkan tentang "route" apalagi sama membuang-buang waktu untuk mengembangkan algoritma-nya dan menyia-nyiakan resoure untuk memproses-nya, karena arsitektur dan mekanisme untuk route-nya sudah terbentuk secara alami.
 
 ### Konsep Desain Struktur Database "Optimal", "Global"
 
-
-Itu hanya contoh, dalam praktek-nya kami menerapkan konsep yang jauh lebih optimal, yaitu: dengan mengganti tabel "account_group" dengan tabel "classification" dimana tabel  "classification" ini menampung semua data yang memiliki karakteristik klasifikasi seperti untuk menggantikan tabel:
+Penjelasan ringan diatas, itu hanya contoh, dalam praktek-nya kami menerapkan konsep yang jauh lebih optimal lagi, yaitu: dengan mengganti tabel "account_group" dengan tabel "classification" dimana tabel  "classification" ini menampung semua data yang memiliki karakteristik klasifikasi untuk menggantikan keberadaan beberapa tabel, seperti tabel:
 
 1. account_group
 2. account_status
@@ -75,11 +72,15 @@ Itu hanya contoh, dalam praktek-nya kami menerapkan konsep yang jauh lebih optim
 5. content_category
 6. dan lain sebagai-nya.
 
-Semua contoh tabel diatas memiliki persamaan, yaitu: jumlah data yang ditampung didalam tabel kurang dari 100 baris data. Menggabungkanya kedalam satu tabel universal/global tentu saja bukan masalah. Dibeberapa kasus data didalam tabel-tabel ini hanya di baca satu kali, sebagai contoh: tabel "account_group", setelah dibaca maka data akan disimpan pada:
+Semua contoh tabel diatas memiliki persamaan, yaitu: jumlah data yang ditampung didalam tabel kurang dari 100 baris data. Menggabungkan-nya kedalam satu tabel universal/global tentu saja bukan masalah. Dibeberapa kasus data didalam tabel-tabel ini hanya di baca satu kali, sebagai contoh: tabel "account_group", setelah dibaca maka data akan disimpan pada:
 ```
 $_SESSION['account_group']
 ```
-Sehingga tidak ada alasan untuk mengatakan bahwa dalam hal ini tabel classification akan mengalami over load. terlebih lagi sebagai programmernya kita sudah pasti akan menjaga dan menghindari potensi overload saat merancang aplikasi. Sehingga hal seperti potensi "over load" ini tidak layak untuk di-perdebatkan. Andai suatu saat terbukti overload, kita hanya perlu mengeluarkan data yang diakses secara berlebihan dan membuatkan tabel baru maka masalahpun akan terselesaikan begitu saja.
+Sehingga tidak ada alasan untuk mengatakan bahwa dalam hal ini tabel classification akan mengalami over load. terlebih lagi sebagai programmer-nya kita sudah pasti akan menjaga dan menghindari potensi overload saat merancang aplikasi. Sehingga hal seperti potensi "over load" ini tidak layak untuk di-perdebatkan. Andai suatu saat terbukti overload, kita hanya perlu mengeluarkan data yang diakses secara berlebihan dan membuatkan tabel baru maka masalahpun akan terselesaikan begitu saja.
+
+### Magic Configuration
+
+Apa yang disebut dengan magic Configuration adalah, sebuah file konfigurasi yang datanya bisa langsung di include tanpa perlu dipasing, adakah yang seperti itu... ? tentu saja ada, di php kita sudah mengenal fungsi var_export. Kita hanya perlu menggunakan-nya ketika akan menulis konfigurasi kedalam sebuah file. Ketika ingin menggunakan-nya, kita hanya perlu menginclude file tadi dan menampung nilai-nya pada variabel yang kita inginkan.
 
 ### Frontend Framework
 #### jQuery
