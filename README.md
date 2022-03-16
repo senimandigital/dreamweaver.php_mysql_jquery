@@ -1,15 +1,17 @@
-# Dreamweaver PHP MySQL jQuery Spry
+# Senimandigital PHP MySQL jQuery Magic
 
-Opensource Content Management System yang di kembangkan sepenuhnya mengikuti Standard Pengembangan dari Code Generator bawaan Dreamweaver.
+Opensource Content Management System, Informasi, Manajemen, Pendukung Keputusan dan Manufaktur yang di kembangkan oleh senimandigital, sepenuhnya mengikuti Standard Pengembangan dari Code Generator bawaan Dreamweaver. Framework ini mempertahankan mekanisme kerja dan pengembangan aplikasi website secara Visual, Drag n Drop.
 
 # Abstrak
 
-Diluarsana sudah beredar banyak sekali framework dan tidak sedikit yang sudah menjadi sangat populer. Tapi kenapa kami tetap Fokus mengembangkan PHP MySQL dan mengemas-nya sebagai Senimandigital Framework, hal ini tidak lain karena pada kenyataan-nya PHP MySQL adalah Framework yang sederhana dan tetap menjadi yang terbaik bahkan untuk saat ini.
+Diluarsana sudah beredar banyak sekali framework dan tidak sedikit yang sudah menjadi sangat populer. Tapi kenapa kami tetap Fokus mengembangkan PHP MySQL jQuery dan menyebut-nya sebagai Senimandigital Framework, hal ini tidak lain karena pada kenyataan-nya PHP MySQL adalah Framework yang sederhana dan tetap menjadi yang terbaik bahkan untuk saat ini.
 
-Bagimana cara kami melihat bahwa Framework PHP MySQL adalah framework terbaik, baik sedikit kami jelaskan: Framework apapun yang populer diluar sana, setelah kami perhatikan semua-nya sama saja, yaitu sama dalam hal memutar-mutar resource. daripada harus membuat Class seperti Class "DB" kami lebih memilih menghidupkan kembali fungsi "mysql" yang sudah ditinggalkan sejak php versi 7.
+Bagimana cara kami melihat bahwa Framework PHP MySQL adalah framework terbaik... ? baiklah sedikit akan kami jabarkan: Framework apapun yang populer diluar sana, setelah kami perhatikan semua-nya sama saja, yaitu sama dalam hal memutar-mutar resource. daripada harus membuat Class seperti Class "DB" kami lebih memilih menghidupkan kembali fungsi "mysql" yang sudah ditinggalkan sejak php versi 7.
 
-Menghidupkan kembali fungsi "mysql" tidak dilakukan dengan mengaktifkan modul php-nya, tapi lebih ke mendefinisikan ulang fungsi ini menggunakan fungsi "mysqli",
-dengan cara ini proyek lama masih dapat berjalan dengan baik pada php 7, 8 dan seterus-nya.
+Menghidupkan kembali fungsi "mysql" tidak dilakukan dengan mengaktifkan modul php-nya, tapi lebih ke mendefinisikan ulang fungsi ini menggunakan fungsi menggunakan fungsi "mysqli" atau "PDO", dengan cara ini proyek lama masih dapat berjalan dengan baik pada PHP Webserver Versi 5 bahkan tetap dapat berjalan juga pada PHP Versi 7, 8 dan seterus-nya.
+
+Pengembang utama PHP menyarankan kita untuk beralih dari fungsi "mysql" ke "mysqli" atau "PDO", saran ini bukan berarti kita harus mereplace kode program yang sudah ada dari yang awal-nya menggunakan "mysql" menjadi "mysqli" tapi ada cara yang lebih baik, yaitu dengan mendefinisikan ulang fungsi-fungsi "mysql" menggunakan fungsi "mysqli" atau "PDO".
+Library untuk mendefinisikan ulang fungsi "mysql" itu akan kita sebut dengan "Driver".
 
 Semua orang sudah menguasai fungsi "mysql" pada PHP, sehingga tidak perlu mempelajari hal baru apapun lagi. Dengan demikian mempelajari Senimandigital Framework tidak berbeda
 dan tidak lebih sulit daripada mempelajari PHP 5 itu sendiri. Selain dalam hal kemudahan dalam mempelajari Senimandigital Framework, kemudahan mengembangkan aplikasi menggunakan
