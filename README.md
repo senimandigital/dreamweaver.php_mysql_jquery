@@ -17,14 +17,54 @@ Semua orang sudah menguasai fungsi "mysql" pada PHP, sehingga tidak perlu mempel
 dan tidak lebih sulit daripada mempelajari PHP 5 itu sendiri. Selain dalam hal kemudahan dalam mempelajari Senimandigital Framework, kemudahan mengembangkan aplikasi menggunakan
 Senimandigital Framework jauh melebihi kemudahan dalam mengembangkan aplikasi menggunakan Livewire, Harviacode, Gii. Karena Senimandigital Framework adalah satu-satunya framework yang aplikasi-nya bisa dikembangkan secara Visual, Drag n Drop.
 
-### Database
+# Platform
 
-#### Konsep Desain Struktur Database "Optimal", "Global"
-Struktur database menentukan tingkat optimalisasi pemroses, struktur database yang optimal meminimalisasi kebutuhan Join antar tabel. 
-Contoh: kita bisa saja membuat tabel "aaccount" dan membuat tabel "account_level", 
-tapi kita tidak melakukan itu kita hanya akan membuat satu tabel dengan field account_group dengan type data enum.
-untuk hierarki kita membuat data dengan pembatas "/" contoh" "administrator/registration". Template desain struktur database bisa dilihat di:
+Senimandigital Framework tidak seperti Framework Populer lain-nya yang di promosikan dengan gencar. Tetapi Senimandigital Framework akan selalu berkembang dan hadir dimana mana.
+Senimandigital terinsfirasi dari berbagai proyek seperti phpMyAdmin, jQuery 1.12.4, Dreamweaver 6.0 dimana mereka semua memiliki persamaan, dan persamaann itu adalah mereka semua merupakan produk yang tidak lekang dimakan usia tidak juga tergerus oleh zaman, tidak pula benar-benar dapat diklasifikasikan kedalam produk yang bisa expired dan mereka semua memiliki ruang kerja tersendiri yang abadi.
+
+Senimandigital Framework Bisa Bekerja dengan Baik pada Platform seperti:
+1. PHP 5
+2. PHP 7
+3. PHP 8
+4. Dan Seterus-nya.
+
+# Arsitektur
+
+Apapun framework-nya, hal pertama yang akan kita lihat tentu saja adalah Arsitektur setelah arsitekturnya dipastikan memenuhi standar kita, barulah kita akan bergerak lebih jauh untuk menguasai berbagai mekanisme yang tersedia untuk kita gunakan.
+
+## Database
+
+Struktur database menentukan tingkat optimalisasi pemroses, struktur database yang optimal meminimalisasi kebutuhan Join antar Tabel. 
+Contoh: kita bisa saja membuat tabel "account" dan membuat tabel "account_level", tapi kita tidak melakukan itu, 
+karena jauh lebih baik untuk membuat satu tabel, dengan menambahkan sebuah field dengan nama "account_group" dan mendefinisikannya dengan "type" data "enum".
+sedangkan untuk hierarki-nya kita membuat data dengan karakter pembatas: "/" sehingga data didalamya akan menjadi seperti:
+
+1. administrator
+2. administrasi
+3. administrasi/alumni
+4. costumer
+5. costumer/blacklist
+6. marketing
+8. marketing/registration
+9. member
+10. member/block
+11. dan seterus-nya
+
+Dengan penamaan level akses seperti diatas, kita bisa langsung menyimpan nilai level akses pengguna yang sedang login pada variabel session, contoh:
+
+```
+$_SESSION['account_level'] = 'administrator'
+```
+Dengan nilai level akses pada seesion, kita bisa langgung menggunakan nilai tersebut untuk mengarahkannya pada file php yang sesuai, contoh:
+```
+include $_SESSION['account_level'] .'/index.php';
+```
+
+
 http://cms.senimandigital.com/index.php/dreamweaver/1.0.0/database/
+
+### Konsep Desain Struktur Database "Optimal", "Global"
+
 
 Itu hanya contoh, dalam praktek-nya kami menerapkan konsep yang jauh lebih optimal, yaitu: dengan mengganti tabel "account_group" dengan tabel "classification" dimana tabel  "classification" ini menampung semua data yang memiliki karakteristik klasifikasi seperti untuk menggantikan tabel:
 
