@@ -32,6 +32,10 @@ Diatas kita bisa melihat ada banyak sekali attribute yang tidak standard dan tid
 2. Attribute \[horizontal_slider\] pada tag \<ul\> Jika anda tidak menggunakan script javascrip magic maka penambahan attribute \[horizontal_slider\] pada elemen ul tidak akan menghasilkan apa-apa, tapi jika anda sudah meload javascript magic maka attribute ini akan bekerja dan otomatis mengatur display list menjadi horizontal dan mengaktifkan fitur slider dengan auto play.
 3. Attribute \[addsrc\] pada tag \<img\> Jika anda tidak menggunakan script javascrip magic maka penambahan attribute \[horizontal_slider\] pada elemen ul tidak akan menghasilkan apa-apa, tapi jika anda sudah meload javascript magic maka attribute ini akan bekerja dan otomatis menambahkan alamat domain gambar diawalan attribute src.
 
+Dari beberapa contoh diatas anda seharusnya sudah mengerti perbedaan Frontend Framework diluar sana dengan Frontend Magic dari Senimandigital, tapi untuk memastikan perbedaan tersebut kami akan jelaskan dalam beberapa point:
+
+1. Frontend Framework hanya memindahkan algoritma javascript ke attribute html, ini berarti kita masih perlu menulis algoritma didalam attribute html, sedangkan "Frontend Magic" berusaha mengambil alih proses pemrograman.
+
 ### Magic Attribute: [href-prev-for] & [href-next-for]
 
 Ketika membangun aplikasi sering kita butuh menyediakan tombol next dan prev, tapi tidak semua-nya perlu di proses dari backend, apabila kita punya list pada halaman yang sama
