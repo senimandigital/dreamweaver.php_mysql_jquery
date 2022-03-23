@@ -19,10 +19,9 @@ Senimandigital Framework jauh melebihi kemudahan dalam mengembangkan aplikasi me
 
 # Platform
 
-Senimandigital Framework tidak seperti Framework Populer lain-nya yang di promosikan dengan gencar. Tetapi Senimandigital Framework akan selalu berkembang dan hadir dimana mana.
-Senimandigital terinsfirasi dari berbagai proyek seperti phpMyAdmin, jQuery 1.12.4, Dreamweaver 6.0 dimana mereka semua memiliki persamaan, dan persamaann itu adalah mereka semua merupakan produk yang tidak lekang dimakan usia tidak juga tergerus oleh zaman, tidak pula benar-benar dapat diklasifikasikan kedalam produk yang bisa expired dan mereka semua memiliki ruang kerja tersendiri yang abadi.
+Senimandigital Framework tidak seperti Framework Populer lain-nya yang di promosikan dengan gencar. Tetapi Senimandigital Framework akan selalu berkembang dan hadir dimana mana. Senimandigital terinsfirasi dari berbagai proyek seperti phpMyAdmin, jQuery 1.12.4, Dreamweaver 6.0 dimana mereka semua memiliki persamaan, dan persamaann itu adalah mereka semua merupakan produk yang tidak lekang dimakan usia tidak juga tergerus oleh zaman, tidak pula benar-benar dapat diklasifikasikan kedalam produk yang bisa expired dan mereka semua memiliki ruang kerja tersendiri yang abadi.
 
-Senimandigital Framework Bisa Bekerja dengan Baik pada Platform seperti:
+Senimandigital Framework selain desain agar dapat bekerja dengan baik pada Browser Classic maupun Pada Browser Modern, Senimandigital Framework juga didesain untuk Bisa Bekerja dengan Baik pada Platform Webserver lama dan dan ebserver keluaran terbaru semisal bekerja seperti pada:
 1. PHP 5
 2. PHP 7
 3. PHP 8
@@ -30,7 +29,7 @@ Senimandigital Framework Bisa Bekerja dengan Baik pada Platform seperti:
 
 # Arsitektur
 
-Apapun framework-nya, hal pertama yang akan kita lihat tentu saja adalah Arsitektur setelah arsitekturnya dipastikan memenuhi standar kita, barulah kita akan bergerak lebih jauh untuk menguasai berbagai mekanisme yang tersedia untuk kita gunakan.
+Apapun framework-nya, hal pertama yang akan kita lihat tentu saja adalah Arsitektur setelah arsitektur-nya dipastikan memenuhi standar kita, barulah kita akan bergerak lebih jauh untuk menguasai berbagai mekanisme yang tersedia untuk kita gunakan. Hal terpenting dari arsitektur Senimandigital Framework yang akan terus kita pertahankan hingga akhir adalah penerapan arsitektur yang mensupport pengembangan secara Visual, Drag n Drop. dan hingga saat ini, Senimandigital Framework adalah satu-satunya yang berdiri kokoh diatas pondaasi pemikiran ini.
 
 ## Database
 
