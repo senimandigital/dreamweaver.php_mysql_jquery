@@ -50,5 +50,16 @@ Ketika anda menulis kode program seperti diatas, maka pada browser kode program 
 Attribute ID akan otomatis ditambahkan ke element, apabila tidak terdapat attribute ID pada element, dimana attribute \[id\] akan disamakan dengan attribut \[name\].
 Dengan automatisasi ini, anda bisa menyelesaikan pembuatan ribuan Element dengan lebih cepat, dan tentu saja cara ini akan menghemat ukuran ruang yang terpakai pada hosting/VPS.
 
+## Auto Replace Element
+Sejauh ini framework yang beredar lebih banyak menyediakan Library yang akhir-nya tetap mengotori kode program, tapi jika sudah menggunakan Senimandigital Framework, segala sesuatu-nya benar-benar dapat diringkas. perhatikan contoh berikut:
+```
+<ul if-no-children-replace-this-to-description="Apabila data ditemukan, maka laporan-nya akan kami tampilkan disini.">
+<?php foreach($replace_report as $name => $newname) { ?>
+ <li>"<?php echo $name; ?>" replace to "<?php echo $newname; ?>"</li>
+<?php } ?>
+</ul>
+```
+hanya dengan menambahkan attribute if-no-children-replace-this-to-description, maka apabila tidak ada data children pada element UI, maka elemet UI akan otomatis di replace dengan paragraph deskripsi.
+
 Kami tidak punya cukup waktu untuk mendokumentasikan semua system automatisasi yang sudah terimplementasi, anda bisa langsung melihat ke dalam kode program untuk mengetahui
 keseluruhan system automatisasi yang sudah diterapkan.
