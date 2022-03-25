@@ -52,7 +52,7 @@ Dengan automatisasi ini, anda bisa menyelesaikan pembuatan ribuan Element dengan
 
 ## Auto Replace Element
 Sejauh ini framework yang beredar lebih banyak menyediakan Library yang akhir-nya tetap mengotori kode program, tapi jika sudah menggunakan Senimandigital Framework, segala sesuatu-nya benar-benar dapat diringkas. perhatikan contoh berikut:
-```
+```html
 <ul if-no-children-replace-this-to-description="Apabila data ditemukan, maka laporan-nya akan kami tampilkan disini.">
 <?php foreach($replace_report as $name => $newname) { ?>
  <li>"<?php echo $name; ?>" replace to "<?php echo $newname; ?>"</li>
