@@ -61,5 +61,20 @@ Sejauh ini framework yang beredar lebih banyak menyediakan Library yang akhir-ny
 ```
 hanya dengan menambahkan attribute if-no-children-replace-this-to-description, maka apabila tidak ada data children pada element UI, maka elemet UI akan otomatis di replace dengan paragraph deskripsi.
 
-Kami tidak punya cukup waktu untuk mendokumentasikan semua system automatisasi yang sudah terimplementasi, anda bisa langsung melihat ke dalam kode program untuk mengetahui
-keseluruhan system automatisasi yang sudah diterapkan.
+## Magic Text to Speech / Text Reading
+Menggunakan Senimandigital Framework, anda bisa dengan mudah membuat komputer berbicara, yang perlu anda lakukan hanyalah menambahkan dua attribute magic, yaitu:
+1. control-speech-for: isi dengan nilai selector untuk element yang text/value-nya ingin dibacakan
+2. control-speech-by: Isi dengan nilai selector untuk element yang text/value-nya dimaksudkan untuk suara pembaca.
+Contoh kode:
+```html
+<textarea id="text_to_speech">Nomor antrian 11 silahkan menuju kasa 12.</textarea>
+<select id="speech_by"></select>
+<button control-speech-for="#text_to_speech" control-speech-by="#speech_by">Baca Tulisan</button>
+```
+Anda tidak perlu bingung, kenapa pada contoh diatas element select tidak memiliki opsi apapun, karena secara runtime Senimandigital Framework yang nantinya 
+akan menambahkan secara otomatis daftar suara yang dapat dipilih dan menyimpan-nya pada element yang dimaksudkan.
+
+# Penutup
+Senimandigital Framework adalah Opensource, meski demikian anda tidak akan mendapatkan framework ini begitu saja, salah satu cara paling mudah dan legal untuk menggunakan Senimandigital Framework adalah dengan mendaftar sebagai anggota dan menggenerate aplikasi menggunakan layanan pada website https://senimandigital.com dengan cara itu anda akan secara otomatis mendapatkan Senimandigital Framework ini. 
+
+Kami tidak punya cukup waktu untuk mendokumentasikan semua system automatisasi yang sudah terimplementasi, anda bisa langsung melihat ke dalam kode program untuk mengetahui keseluruhan system automatisasi yang sudah diterapkan. Atau anda bisa juga dengan cara menggunakan aplikasi yang dibangun menggunakan Senimandigital Framework, maka anda akan mendapat petunjuk penggunaan secara runtime.
