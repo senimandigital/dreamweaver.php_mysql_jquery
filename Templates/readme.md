@@ -50,6 +50,13 @@ Ketika anda menulis kode program seperti diatas, maka pada browser kode program 
 Attribute ID akan otomatis ditambahkan ke element, apabila tidak terdapat attribute ID pada element, dimana attribute \[id\] akan disamakan dengan attribut \[name\].
 Dengan automatisasi ini, anda bisa menyelesaikan pembuatan ribuan Element dengan lebih cepat, dan tentu saja cara ini akan menghemat ukuran ruang yang terpakai pada hosting/VPS.
 
+## Auto Synchrone Title/Tooltip
+Anda bisa mendefinisikan attribute title pada label, maka title akan di synkronkan secara otomatis ke element input yang terelasi.
+```html
+<label for="classification_alias" title="Isi dengan angka Nol apabila anda tidak mengerti">Alias Untuk Judul / Nama Tabel Virtual</label>
+```
+Dengan cara ini attribut pada element input akan menjadi lebih bersih, dan nyaman untuk dimutakhirkan apabila suatu saat pemutakhiran itu diperlukan.
+
 ## Auto Replace Element
 Sejauh ini framework yang beredar lebih banyak menyediakan Library yang akhir-nya tetap mengotori kode program, tapi jika sudah menggunakan Senimandigital Framework, segala sesuatu-nya benar-benar dapat diringkas. perhatikan contoh berikut:
 ```html
