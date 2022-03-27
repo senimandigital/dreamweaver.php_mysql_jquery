@@ -8,6 +8,12 @@ Folder Template pada Senimandigital Framework, berisi berbagai resource yang sej
 
 # Abstrak
 
+Di senimandigital kami dengan tegas mengatkan bahwa framework populer yang beredar banyak yang melakukan tipu-tipu, anda yang sangat mencintai framework yang anda gunakan tidak perlu geram dengan pernyataan ini, karena kami tidak bermaksud buruk dengan statement diatas, dan kami punya penjelasan kenapa sampai ada statement seperti itu.
+
+1. Bagi kami, framework itu seharus-nya tidak hanya mengatur bagaimana kita bekerja tapi seharus-nya mempermudah kita dalam bekerja. apa yang kami nilai kurang tepat dari apa yang framework berikan adalah: Framework itu tidak benar-benar mempermudah pengembangan aplikasi, tetapi justru mempersulit dan memaksa kita membuang-buang waktu mempelajari lebih banyak hal seperti class dan method tambahan, yang sering kali system penamanyaan-nya terlalu aneh bahkan juga sangat asing.
+2. Framework terlalu menyediakan solusi yang berfokus pada satu infrastruktur, katakanlah framework backend maka ia hanya fokus memberikan solusi dari sisi backend, begitu pula untuk framework frontend ia hanya fokus memberikan solusi dari sisi frontend. Sementara saat kita bekerja, dalam membangun aplikasi kita akan lebih banyak membutuhkan penerapan konsep hybrid/campuran. Karena kita tau, mekanisme dan arsitektur hybrid jelas bisa memberikan kinerja yang jauh lebih optimal ketimbang memaksakan seluruh solusi dari satu sisi infrastruktur saja.
+3. Dalam pemrograman kita sebenarnya tidak begitu membutuhkan yang nama-nya framework, karena yang jauh lebih kita butuhkan adalah alat bantu kerja yang bisa mengautomatisasi proses ngoding, contoh paling sederhana untuk automatisasi ini tentu saja adalah kode generator. Dengan adanya kode generator kita tidak harus mempelajari framework  tapi cukup mempelajari bagaimana membuat Database, XML dan JSON, setelah mempelajari ketiga hal itu kita sudah bisa menghasilkan aplikasi menggunakan framework apapun yang kita mau, setelah proses pengembangan aplikasi dimulai, barulah kemudian kita membuang waktu untuk mempelajari framework yang sedang kita gunakan.
+
 Template Senimandigital Framework memiliki beberapa penerapan konsep automatisasi
 
 # Feature
