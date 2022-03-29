@@ -59,3 +59,9 @@ apabila attribute seperti: hrefp-popup di klik, maka attribute href akan dibatal
 <a href-panel-right="=">Text</a>
 <a href-popup="/filename.php">Text</a>
 ```
+# Penutup
+Perlu anda ketahui, bahwa Senimandigital Framework tidak mengandalkan pengalaman dan keterampilan pengguna untuk merancang aplikasi yang mutakhir tapi lebih mengandalkan berbagai tool Desain Visual, attribute yang mungkin bagi anda lihat unik aneh dan tidak standar, sama sekali tidak perlu dihapal.
+Karena yang menghapalnya adalah tool kerja yang anda gunakan, kami menyediakan tool pengembangan khusus untuk menggunakan dan mengembangkan aplikasi menggunakan Senimandigital Framework.
+
+Ada ribuan kode generator didalam tool pengembangan yang kami sediakan, dimana dengan itu memungkinkan anda membangun system informasi dalam waktu kurang dari satu
+minggu.
