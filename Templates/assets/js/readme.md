@@ -64,4 +64,4 @@ Perlu anda ketahui, bahwa Senimandigital Framework tidak mengandalkan pengalaman
 Karena yang menghapalnya adalah tool kerja yang anda gunakan, kami menyediakan tool pengembangan khusus untuk menggunakan dan mengembangkan aplikasi menggunakan Senimandigital Framework.
 
 Ada ribuan kode generator didalam tool pengembangan yang kami sediakan, dimana dengan itu memungkinkan anda membangun system informasi dalam waktu kurang dari satu
-minggu.
+minggu. Kode generator hebat ini akan kami perkenalkan dengan nama Backend behavior dan Frontend Behavior.
