@@ -83,24 +83,25 @@ Apa yang disebut dengan magic Configuration adalah, sebuah file konfigurasi yang
 
 ### Frontend Framework
 #### jQuery
-Kita menggunakan jQuery Versi 1, dengan alasan fleksibelitas. jQuery 1.2 masih dapat bekerja dengan Browser lawas,
-yang arti-nya jQUery masih bisa bekerja pada browser bawaann aplikasi seperti Visual Basic.
-Pertimbangan kami daripada harus mempelajari bahkan mengembangkan jQuery Versi terbaru yang tidak bisa bekerja pada browser lawas, masih lebih baik mempelajari jQuery Versi
+Kita menggunakan jQuery Versi 1, dengan alasan fleksibelitas. jQuery 1.12.4 masih dapat bekerja dengan Browser lawas,
+yang arti-nya jQuery masih bisa bekerja pada browser bawaan aplikasi seperti Visual Basic.
+Pertimbangan kami daripada harus mempelajari bahkan mengembangkan jQuery Versi terbaru yang tidak bisa bekerja pada browser lawas, masih lebih baik mempelajari jQuery Versi 1.12.4.
+
+Yang perlu anda ketahui versi terakhir untuk jQuery versi 1 adalah jQuery 1.12.4, kami tidak hanya menggunakan jQuery Versi 1.12.4 secara apa adanya, tapi kami memperbaharui jQuery Versi 1.12.4 dan memberi-nya label dengan kode Versi 1.12.5.
 
 #### Spry
-Frontend Fraamework Spry memang tidak berkembang, namun tidak buruk juga untuk dipakai setidaknya setelah menggunakan Spry kita bisa berpindah ke Vue dimasa yang akan datang.
-Yang terpenting, dengan Spry kita bisa mengembangkan aplikasi Secara Visual.
+Frontend Fraamework Spry memang tidak berkembang, namun tidak buruk juga untuk dipakai setidaknya setelah menggunakan Spry kita bisa berpindah ke Vue dimasa yang akan datang. Yang terpenting, dengan Spry kita bisa mengembangkan aplikasi Secara Visual, Drag n Drop. Kita tentu saja tidak menggunakan Spry secara apa adanya, tapi juga melakukan kostumasi secara extrem
 
 #### Magic JS
-Jika anda tau Bootstrap, kami setuju itu bagus dan sangat membantu dalam mendesain aplikasi. Tapi kita selalu butuh sesuatu yang Kurang dan Lebih dari itu ketika membangun aplikasi.
+Jika anda tau Bootstrap, kami setuju itu bagus dan sangat membantu kita dalam mendesain aplikasi. Tapi kita selalu butuh sesuatu yang Kurang dan Lebih dari itu ketika membangun aplikasi.
 maka kami lebih memilih membuat Frontend Framework yang baru, dengan Konsep Utama Integrasi Frontend dan Backend Framework dengan integrasi ada banyak hal yang bisa diotomatisasi.
-Goal yang ingin dicapai dengan Magic JS adalah, pemrogramer hanya perlu belajar htm dan attribute untuk membuat aplikasi.
+Goal yang ingin dicapai dengan Magic JS adalah, pemrogramer hanya perlu belajar html dan attribute untuk membuat aplikasi.
 
 Perbedaan Magic JS dengan Bootstrap dan Frontend lain-nya adalah jika mereka menggunakan attribute class untuk mengkonfigurasi, maka dalam magic js kita menggunakan attribute "role".
 Contoh: &lt;p role="description">Deskripsi&lt;/p> maka dom akan di update secara otomatis.
 
-Dalam Magic JS, attribute "role" tidak hanya di handle oleh Javascript tapi juga oleh Backend, 
+Dalam Magic JS, attribute "role" tidak hanya di handle oleh Javascript tapi juga oleh Backend, attribute role kami gagas untuk symbol mekanisme hybrid 
 misal anda menggunakan Framework jQuery untuk membuat tab anda hanya perlu membuat list seperti biasa namun dengan tambahan atribute role="tabs"
-anda tidak perlu menuliskan script include jquery dan css yang diperlukan, karena php yang akan melakukan-nya.
+anda tidak perlu menuliskan script include jQuery dan css yang diperlukan, karena php yang akan melakukan-nya.
 
 Hal seperti ini adalah sesuatu yang sangat kami impikan, dan belum ada Frontend Framework lain yang kami dapati melakukan-nya.
