@@ -68,3 +68,10 @@ sehingga pada browser akan menjadi seperti ini:
 <center>
 ```
 Dengan cara ini, kode program yang ditulis akan menjadi benar-benar ramping dimana kita hanya perlu membuat satu element utama dan biarkan magic yang bekerja menuntaskan-nya.
+
+### Child & Parrent Style
+Kita semua sudah mengenal ada-nya attribute style. Attribute ini berfungsi untuk menyisipkan css keladam element. Pada senimandigital framework kita juga menambahkan
+attribute child-style dan parrent-style, hanya dari namanya saja anda pasti-nya sudah dapat membayangkan apa fungsi dari attribute ini.
+
+# Penutup
+Senimandigital sudah menyediakan ratusan bahkan ribuan attribute baru, mungkin dipikiran anda bertanya-tanya ribuan attribut baru apakah itu tidak membuat performa aplikasi turun drastis... ? Diawal pengembangan kami juga berpikir seperti itu, tapi kemudian setelah terus menerus mendefinisikan attribute baru setiap hari-nya, terbukti aplikasi tetap berjalan normal dan tidak terasa ada-nya penurunan kinerja baik itu saat menggunakan aplikasi komputer desktop maupun saat website diakses menggunakan smartphone.
