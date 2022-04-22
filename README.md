@@ -2,26 +2,27 @@
 
 Opensource Content Management System, Informasi, Manajemen, Pendukung Keputusan dan Manufaktur yang di kembangkan oleh senimandigital, sepenuhnya mengikuti Standard Pengembangan dari Code Generator bawaan Dreamweaver. Framework ini mempertahankan mekanisme kerja dan pengembangan aplikasi website secara Visual, Drag n Drop dan menyediakan berbagai tool manajemen source code yang terdistribusi dan terintegrasi.
 
+Senimandigital menggunakan Framework PHP5, apa arti-nya ini "Menggunakan Framework PHP5" bukankah PHP5 sudah usang dan sudah ditinggalkan... ? Benar PHP5 sudah ditingglkan, tetapi meski PHP5 sudah ditinggalkan tetapi ilmu-nya bersifat kekal dan abadi. Artinya adalah meskipun kita membuat aplikasi menggunakan PHP7, PHP8 dan bahkan menggunakan PHP yang lebih baru, kita tetap menggunakan style penulisan PHP5.
+
+Apa yang dilakukan oleh Senimandigital Framework adalah merevolusi dan menghidupkan kembali function yang sudah ditinggalkan oleh pengembang resmi, sehingga function-function PHP5 yang sudah ditinggalkan dapat digunakan kembali dengan kinerja yang lebih baik, hal ini kita capai dengan membuat Driver khusus untuk melakukan tugas tersebut.
+
 # Abstrak
 
-Diluarsana sudah beredar banyak sekali framework dan tidak sedikit yang sudah menjadi sangat populer. Tapi kenapa kami tetap Fokus mengembangkan PHP MySQL jQuery dan menyebut-nya sebagai Senimandigital Framework, hal ini tidak lain karena pada kenyataan-nya PHP MySQL adalah Framework yang sederhana dan tetap menjadi yang terbaik bahkan untuk saat ini.
+Diluarsana sudah beredar banyak sekali framework dan tidak sedikit yang sudah menjadi sangat populer. Tapi kenapa kami tetap Fokus mengembangkan PHP MySQL Bootstrap jQuery dan menyebut-nya sebagai Senimandigital Framework, hal ini tidak lain karena pada kenyataan-nya PHP MySQL adalah Framework yang sederhana dan tetap menjadi yang terbaik bahkan untuk saat ini.
 
 Bagimana cara kami melihat bahwa Framework PHP MySQL adalah framework terbaik... ? baiklah sedikit akan kami jabarkan: Framework apapun yang populer diluar sana, setelah kami perhatikan semua-nya sama saja, yaitu sama dalam hal memutar-mutar resource. daripada harus membuat Class seperti Class "DB" kami lebih memilih menghidupkan kembali fungsi "mysql" yang sudah ditinggalkan sejak php versi 7.
 
-Menghidupkan kembali fungsi "mysql" tidak dilakukan dengan mengaktifkan modul php-nya, tapi lebih ke mendefinisikan ulang fungsi ini menggunakan fungsi menggunakan fungsi "mysqli" atau "PDO", dengan cara ini proyek lama masih dapat berjalan dengan baik pada PHP Webserver Versi 5 bahkan tetap dapat berjalan juga pada PHP Versi 7, 8 dan seterus-nya.
+Menghidupkan kembali fungsi "mysql" tidak dilakukan dengan mengaktifkan modul php-nya, tapi lebih ke mendefinisikan ulang fungsi ini menggunakan fungsi "mysqli" atau "PDO", dengan cara ini proyek lama masih dapat berjalan dengan baik pada PHP Webserver Versi 5 bahkan tetap dapat berjalan juga pada PHP Versi 7, 8 dan seterus-nya. Tidak hanya dapat berjalan dengan baik, tetapi juga berkinerja lebih baik.
 
-Pengembang utama PHP menyarankan kita untuk beralih dari fungsi "mysql" ke "mysqli" atau "PDO", saran ini bukan berarti kita harus mereplace kode program yang sudah ada dari yang awal-nya menggunakan "mysql" menjadi "mysqli" tapi ada cara yang lebih baik, yaitu dengan mendefinisikan ulang fungsi-fungsi "mysql" menggunakan fungsi "mysqli" atau "PDO".
-Library untuk mendefinisikan ulang fungsi "mysql" itu akan kita sebut dengan "Driver".
+Pengembang utama PHP menyarankan kita untuk beralih dari fungsi "mysql" ke "mysqli" atau "PDO", saran ini bukan berarti kita harus mereplace kode program yang sudah ada dari yang awal-nya menggunakan "mysql" menjadi "mysqli" tapi ada cara yang lebih baik, yaitu dengan mendefinisikan ulang fungsi-fungsi "mysql" menggunakan fungsi "mysqli" atau "PDO". Library untuk mendefinisikan ulang fungsi "mysql" itu akan kita sebut dengan "Driver".
 
-Semua orang sudah menguasai fungsi "mysql" pada PHP, sehingga tidak perlu mempelajari hal baru apapun lagi. Dengan demikian mempelajari Senimandigital Framework tidak berbeda
-dan tidak lebih sulit daripada mempelajari PHP 5 itu sendiri. Selain dalam hal kemudahan dalam mempelajari Senimandigital Framework, kemudahan mengembangkan aplikasi menggunakan
-Senimandigital Framework jauh melebihi kemudahan dalam mengembangkan aplikasi menggunakan Livewire, Harviacode, Gii. Karena Senimandigital Framework adalah satu-satunya framework yang aplikasi-nya bisa dikembangkan secara Visual, Drag n Drop.
+Semua orang sudah menguasai fungsi "mysql" pada PHP, sehingga tidak perlu mempelajari hal baru apapun lagi. Dengan demikian mempelajari Senimandigital Framework tidak berbeda dan tidak lebih sulit daripada mempelajari PHP5 itu sendiri. Selain dalam hal kemudahan dalam mempelajari Senimandigital Framework, kemudahan mengembangkan aplikasi menggunakan Senimandigital Framework jauh melebihi kemudahan dalam mengembangkan aplikasi menggunakan Livewire, Harviacode, Gii. Karena Senimandigital Framework adalah satu-satunya Framework yang aplikasi-nya bisa dikembangkan secara Visual, Drag n Drop dan tidak hanya itu, Senimandigital Framework juga melibatkan "Artificial Intelegencie" untuk membantu dan menemani anda dalam menyelesaikan pengembangan aplikasi.
 
 # Platform
 
-Senimandigital Framework tidak seperti Framework Populer lain-nya yang di promosikan dengan gencar. Tetapi Senimandigital Framework akan selalu berkembang dan hadir dimana mana. Senimandigital terinsfirasi dari berbagai proyek seperti phpMyAdmin, jQuery 1.12.4, Dreamweaver 6.0 dimana mereka semua memiliki persamaan, dan persamaann itu adalah mereka semua merupakan produk yang tidak lekang dimakan usia tidak juga tergerus oleh zaman, tidak pula benar-benar dapat diklasifikasikan kedalam produk yang bisa expired dan mereka semua memiliki ruang kerja tersendiri yang abadi.
+Senimandigital Framework tidak seperti Framework Populer lain-nya yang di promosikan dengan gencar. Tetapi Senimandigital Framework akan selalu berkembang dan hadir dimana mana. Senimandigital terinsfirasi dari berbagai proyek seperti phpMyAdmin, PHP5, jQuery 1.12.4, Dreamweaver 6.0 dimana mereka semua memiliki persamaan, dan persamaann itu adalah mereka semua merupakan produk yang tidak lekang dimakan usia tidak juga tergerus oleh zaman, tidak pula benar-benar dapat diklasifikasikan kedalam produk yang bisa expired dan mereka semua memiliki ruang kerja tersendiri yang abadi.
 
-Senimandigital Framework selain desain agar dapat bekerja dengan baik pada Browser Classic maupun Pada Browser Modern, Senimandigital Framework juga didesain untuk Bisa Bekerja dengan Baik pada Platform Webserver lama dan dan ebserver keluaran terbaru semisal bekerja seperti pada:
+Senimandigital Framework selain desain agar dapat bekerja dengan baik pada Browser Classic maupun Pada Browser Modern, Senimandigital Framework juga didesain untuk Bisa Bekerja dengan Baik pada Platform Webserver lama dan dan webserver keluaran terbaru, semisal bekerja seperti pada:
 1. PHP 5
 2. PHP 7
 3. PHP 8
@@ -29,7 +30,31 @@ Senimandigital Framework selain desain agar dapat bekerja dengan baik pada Brows
 
 # Arsitektur
 
-Apapun framework-nya, hal pertama yang akan kita lihat tentu saja adalah Arsitektur setelah arsitektur-nya dipastikan memenuhi standar kita, barulah kita akan bergerak lebih jauh untuk menguasai berbagai mekanisme yang tersedia untuk kita gunakan. Hal terpenting dari arsitektur Senimandigital Framework yang akan terus kita pertahankan hingga akhir adalah penerapan arsitektur yang mensupport pengembangan secara Visual, Drag n Drop. dan hingga saat ini, Senimandigital Framework adalah satu-satunya yang berdiri kokoh diatas pondaasi pemikiran ini.
+Apapun framework-nya, hal pertama yang akan kita lihat tentu saja adalah Arsitektur, setelah arsitektur-nya dipastikan memenuhi standar kita, barulah kita akan bergerak lebih jauh untuk menguasai berbagai mekanisme yang tersedia untuk kita gunakan. Hal terpenting dari arsitektur Senimandigital Framework yang akan terus kita pertahankan hingga akhir adalah penerapan arsitektur yang mensupport pengembangan secara Visual, Drag n Drop. dan hingga saat ini, Senimandigital Framework adalah satu-satunya yang berdiri kokoh diatas pondasi pemikiran ini.
+
+Senimandigital Framework hanya memiliki 1 file library untuk backend, dan 2 file library untuk Frontend yaitu 1 file css dan 1 file javascript. Satu hal yang pertama perlu anda sadari, bahwa file backend akan berulangkali menginclude diri-nya sendiri secara "recursive" sesuai kebutuhan.
+
+Dalam rangka menginclude dirinya sendiri, Senimandigital Framework sejati-nya melakukan tugas automatisasi:
+
+1. **Menyiapkan Library Utama**: Pada tahap pertama, Senimandigital Framework akan menyiapkan Driver untuk aplikasi anda jika itu dibutuhkan, jika driver tidak dibutuhkan maka langkah ini akan dilewati secara otomatis.
+2. **Melakukan Konseksi Ke Database**: Pada tahap kedua, Senimandigital Framework akan melakukan koneksi ke Database dan memeriksa Sessions dan melakukan berbagai tindakan yang dibutuhkan.
+3. **Mempersiapkan Kebutuhan Eksekusi Aplikasi**: File yang menginclude Senimandigital Framework itu adalah file yang akan kita sebut sebagai Aplikasi, pada langkah ke tiga ini Senimandigital Framework akan memeriksa berbagai kebutuhan Library dari Aplikasi yang anda tulis, dan otomatis menyediakan-nya. Sehingga anda sebagai programmer sama sekali tidak perlu lagi memikirkan dan mengincludekan library yang dibutuhkan oleh aplikasi, karena Senimandigital Framework yang akan melakukan-nya untuk anda dan anda hanya cukup fokus untuk mendesain User Interface dan User Experience menggunakan kode HTML.
+4. **Mengeksekusi Aplikasi**: Pada tahapan ini Senimandigital Framework akan mengeksekusi aplikasi yang sudah anda tulis, melakukan semua hal yang memang perlu dilakukan oleh backend, merender kode html dan memanipulasinya terlebih dahulu jika itu diperlukan.
+5. **Mengirimkan Kode HTML ke Browser**: Jika tidak ada lagi yang perlu dilakukan maka Senimandigital Framework akan mengirimkan kode html ke browser.
+
+Jika anda mencermati 5 tahapan diatas, anda pastinya menyadari banyak kejanggalan seperti ada beberapa prosedur yang tampak kurang, benar jika itu yang anda rasakan karena memang ada banyak sekali prosudur yang tidak tertulis pada lima tahapan diatas, tapi memang begitulah adanya, karena posedur yang anda rasa kurang tadi sebenar-nya sudah dilakukan secara otomatis oleh Senimandigital Framework.
+
+Prosedur standar yang anda kira hilang tadi dan ternyata sudah dituntaskan oleh Senimandigital Framework, maka prosedur-prosedur itulah yang kami sebut sebagai prosedur "Magic Programming".
+
+Lalu apa saja prosedur yang dilakukan secara otomatis oleh Senimandigital Framework, sulit menjabarkannya satu persatu karena jumlah prosedur yang dilakukan secara otomatis Oleh Senimandigital Framework bisa saja jumlah-nya ada puluhan ribu mekanisme. Tapi disini akan kita rangkum sedikit, terutama untuk bagian-bagian yang mudah untuk anda pahami:
+
+1. Otomatis menyediakan Library Frontend Framework, Ketika aplikasi anda membutuhkan jQuery maka library jQuery akan diload secara otomatis, ketika aplikasi anda membutuhkan Angular, Vue, React, Leaflet, TinyMCE, CodeMirror dan ribuan plugins javascript lain-nya, maka library tersebut akan disiapkan secara otomatis. Benar, seperti yang anda pikirkan jika anda berpikir Senimandigital Framework sangat Cerdas untuk mampu menyiapkan semua Library yang dibutuhkan oleh aplikasi yang anda tulis, padahal anda hanya menulis kode html.
+
+Apakah anda mulai berpikir bahwa kinerja dan performa aplikasi ini akan terasa buruk karena melakukan berbagai proses automatisasi dibelakang layar, anda boleh saja mengira begitu jika anda belum menggunakan Senimandigital Framework, tapi jika anda sudah menggunakannya, maka anda akan tahu bahwa kinerja Senimandigital Framework ternyata tidak lebih buruk dari Framework populer lain-nya, bahkan anda akan mengakui bahwa kinerja Senimandigital Framework ternyata masih jauh lebih baik dari berbagai kinerja Framework Populer lain-nya, padahal Senimandigital Framework sama sekali belum mengaktifkan fitur Cache.
+
+Kenapa bisa seperti itu, bukankah automatisasi seharusnya membutuhkan banyak resource, bagaimana Senimandigital Framework melakukannya tanpa mengorbankan performa aplikasi bahkan kinerja aplikasi masih mampu setara dengan aplikasi PHP Native lain-nya. Satu hal yang bisa kami katakan Senimandigital Framework menerapkan "Artificial Intelegence" dan fokus hanya menghandle "the true condition" dimana segala sesuatu yang tidak sesuai akan otomatis diabaikan dan tidak akan memicu proses apapun.
+
+Lalu bagaimana dengan memori, bukankah itu konsep automatisasi ini juga akan menguras memory... ? sama sekali tidak seperti itu, karena senimandigital Framework tidak memutar-mutar resource seperti apa yang dilakukan kebanyakan Framework dan Aplikasi Populer diluarsana. Senimandigital ditulis untuk menggunakan memori secara optimal dan menggunakan-nya secara berulang. Sehingga pemakaian memori dapat terus dioptimakan karena selalu ditekan pada angka terendah.
 
 ## Database
 
