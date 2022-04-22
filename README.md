@@ -130,3 +130,11 @@ misal anda menggunakan Framework jQuery untuk membuat tab anda hanya perlu membu
 anda tidak perlu menuliskan script include jQuery dan css yang diperlukan, karena php yang akan melakukan-nya.
 
 Hal seperti ini adalah sesuatu yang sangat kami impikan, dan belum ada Frontend Framework lain yang kami dapati melakukan-nya.
+
+## Resiko Penolakan, Tanggapan dan Antisipasinya
+Senimandigital Framework meskipun sudah dikembangkan selama lebih dari 10 Tahun, tapi selama itu Senimandigital Framework bukanlah Opensource sehingga konsep dari Senimandigital Framework masih merupakan hal baru dan perlu waktu untuk pihak luar untuk menguji-nya. Sehingga sangat mungkin Senimandigital Framework akan menerima berbagai penolakan, dengan berbagai alasan:
+
+1. Waktu belajar, Untuk mempelajari penggunaan Senimandigital Framework ideal-nya adalah 8 jam kerja praktek.
+2. Waktu kerja, Untuk membuat system informasi yang umum seperti: System Informasi Manajemen Perpustakaan, System Informasi Manajemen Toko, System Informasi Manajemen Gudang, System Informasi Manajemen Asset ideal-nya adalah 5 hari kerja.
+3. Cara kerja, Ketika menggunakan Senimandigital Framework programmer hanya perlu fokus untuk membuat database menggunakan tool database yang sudah disediakan, dengan waktu penuntasan kerja mulai dari 1 hingga 8 jam kerja. Sedangkan ketika untuk membuat aplikasi, programmer hanya perlu membuat kode html menggunakan tool yang juga sudah disediakan, dari awal hingga tuntas akan membutuhkan 1 - 4 hari kerja, tergantung seberapa banyak modul dan level akses user yang akan dibuat, untuk membuat satu aplikasi/modul akan membutuhkan waktu 5 hingga 15 menit yang artinya dalam 1 jam programmer akan dapat membuat hingga 12 modul/aplikasi.
+4. Biaya Jasa, senimandigital mewajibkan pengguna untuk memasarkan produk yang dibuat minimal dengan harga Rp. 7.500.000,00 hanya dengan cara ini anda dapat menyewa aplikasi dan jasa kami dengan biaya 10 - 40% dari nilai proyek. Dengan menggunakan Layanan Teknologi secara full fitur dan bekingan langsung dari pihak kami maka target waktu belajar, waktu kerja dan cara kerja seperti disebutkan pada point-point sebelumnya akan bisa direalisasikan.
