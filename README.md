@@ -1,4 +1,4 @@
-# Senimandigital PHP MySQL jQuery Magic
+# Senimandigital PHP MySQL Bootstrap jQuery Magic
 
 Opensource Content Management System, Informasi, Manajemen, Pendukung Keputusan dan Manufaktur yang di kembangkan oleh senimandigital, sepenuhnya mengikuti Standard Pengembangan dari Code Generator bawaan Dreamweaver. Framework ini mempertahankan mekanisme kerja dan pengembangan aplikasi website secara Visual, Drag n Drop dan menyediakan berbagai tool manajemen source code yang terdistribusi dan terintegrasi.
 
