@@ -10,7 +10,7 @@ Hal pertama yang harus kita ketahui saat menggunakan Magic Frontend dari seniman
 <meta name="domain_templates" content="https://senimandigital.kom/Templates/" />
 ```
 #### Magic Meta Dengan Login
-```
+```html
 <meta name="domain_administrator" content="https://administrator.senimandigital.kom/" />
 ```
 Diatas hanya contoh, dalam prakteknya anda dapat menambahkan costume meta anda sendiri. Hal yang paling penting dari Magic Meta ini adalah: Javascript yang kita tulis harus beraksi sesuai nilai yang didefinisikan pada "Magic Meta", sehingga pada javascript tidak perlu lagi mendefinisikan variable global.
@@ -70,6 +70,13 @@ Dalam banyak kasus, kita ingin meletakan Element seperti link agar rata kanan me
   <a target="_blank" href="/project_file_rename_recursive.php">Recursive File Rename</a>
 </nav>
 ```
+
+# Sebenar-nya apa perbedaan Magic.JS dengan Framework Javascript lain... ?
+magic.js kami perlakukan sebagai library dan bukan framework, magic.js tidak menolak framework yang sudah ada tapi magic.js akan berprilaku sebagai driver. Orang selalu mengistilahkan bahwa framework adalah alat atau kendaraan untuk membantu kita mencapai tujuan dalam pengembangan aplikasi dengan lebih cepat dan mudah.
+
+Sekarang setelah kita tahu bahwa framework adalak kendaraan, maka untuk menjadi lebih mudah tentu saja kita butuh driver untuk mengendarai kendaraan tersebut, sehingga kita tidak perlu mempelajari hal-hal apapun terkait kendaraan yang kita gunakan tapi kita hanya perlu belajar menjadi bos yang bisa mengatur sang driver tadi.
+
+Tidak perduli akhir-nya anda mau menggunakan kendaraan manapun, anda hanya perlu mendownload dan menggunakan driver yang sesuai. dengan cara ini kendaraan manapun yang akhirnya anda gunakan, cara kerja anda tidak akan berubah, anda hanya perlu mengerti satu bahasa yang dikuasai oleh driver sehingga anda bisa berkomunikasi dengan driver yang anda pilih.
 
 # Penutup
 Perlu anda ketahui, bahwa Senimandigital Framework tidak mengandalkan pengalaman dan keterampilan pengguna untuk merancang aplikasi yang mutakhir tapi lebih mengandalkan berbagai tool Desain Visual, attribute yang mungkin bagi anda terlihat unik, aneh dan tidak standar, sama sekali tidak perlu dihapal.
