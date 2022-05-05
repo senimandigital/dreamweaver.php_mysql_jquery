@@ -78,6 +78,20 @@ Sekarang setelah kita tahu bahwa framework adalak kendaraan, maka untuk menjadi 
 
 Tidak perduli akhir-nya anda mau menggunakan kendaraan manapun, anda hanya perlu mendownload dan menggunakan driver yang sesuai. dengan cara ini kendaraan manapun yang akhirnya anda gunakan, cara kerja anda tidak akan berubah, anda hanya perlu mengerti satu bahasa yang dikuasai oleh driver sehingga anda bisa berkomunikasi dengan driver yang anda pilih.
 
+## Keyword yang logis
+
+Jika anda memperhatikan maka anda akan mengerti bahwa menggunakan magic.js tidak membuat anda perlu mempelajari terlalu banyak hal baru, karena kita benar-benar hanya memperkaya arsitektur native.
+
+anda sudah mengenal attrtibute seperti name, style, role, href sekarang tinggal anda menggunakan sedikit penalaran maka anda akan terbiasa dengan penambahan attribute dari magic.js contoh:
+
+```
+addname nameadd
+parent-style child-style
+href-popup href-dialog href-dialog-ajax
+```
+
+Jika kita menggunakan istilah dalam bahasa indonesia maka kita akan tau dengan istilah awalan dan akhiran "kata kerja" begitulah dasar kami dalam penambahan attribute, kami mencoba membuat-nya se-logis dan sedekat mungkin denggan keyword sudah ada dan sudah sangat kita kenal.
+
 # Penutup
 Perlu anda ketahui, bahwa Senimandigital Framework tidak mengandalkan pengalaman dan keterampilan pengguna untuk merancang aplikasi yang mutakhir tapi lebih mengandalkan berbagai tool Desain Visual, attribute yang mungkin bagi anda terlihat unik, aneh dan tidak standar, sama sekali tidak perlu dihapal.
 Karena yang menghapal-nya adalah tool kerja yang anda gunakan, kami menyediakan tool pengembangan khusus untuk menggunakan dan mengembangkan aplikasi menggunakan Senimandigital Framework.
