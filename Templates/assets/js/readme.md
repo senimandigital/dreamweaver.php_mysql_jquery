@@ -3,7 +3,7 @@
 Hal pertama yang harus kita ketahui saat menggunakan Magic Frontend dari senimandigital adalah: "Magic Meta" kita menggunakan meta untuk berkomunikasi satu arah dari backend ke frontend. Magic Meta di klasifikasikan kedalam 2 kelompok utama, yaitu: Magic Meta Tanpa Login dan Magic Meta Dengan Login:
 
 #### Magic Meta Tanpa Login
-```
+```html
 <meta name="domain_site" content="https://senimandigital.com/" />
 <meta name="domain_sub" content="templates" />
 <meta name="domain_gambar" content="https://images.senimandigital.com/" />
@@ -41,7 +41,7 @@ Dari beberapa contoh diatas anda seharusnya sudah mengerti perbedaan Frontend Fr
 Ketika membangun aplikasi sering kita butuh menyediakan tombol next dan prev, tapi tidak semua-nya perlu di proses dari backend, apabila kita punya list pada halaman yang sama
 maka kita bisa membuat tombol next dan prev hanya dengan menggunakan kode html seperti ini:
 
-```
+```html
 <a href-prev-for="#list_directory">Prev</a>
 <a href-next-for="#list_directory">Next</a>
 ```
@@ -51,7 +51,7 @@ maka kita bisa membuat tombol next dan prev hanya dengan menggunakan kode html s
 Senimandigital menyediakan berbagai cara interaksi dengan form yang berbeda, secara default attribute href tetap digunakan untuk mengantisifasi aksi berdasarkan klik kanan.
 apabila attribute seperti: hrefp-popup di klik, maka attribute href akan dibatalkan dan yang diproses adalah even on click yang targetnya diambil dari attribute href dialog.
 
-```
+```html
 <a href-dialog="http://">Text</a>
 <a href-dialog-ajax="https://">Text</a>
 <a href-panel-left="#element">Test</a>
@@ -59,9 +59,21 @@ apabila attribute seperti: hrefp-popup di klik, maka attribute href akan dibatal
 <a href-panel-right="=">Text</a>
 <a href-popup="/filename.php">Text</a>
 ```
+
+### Magic Attribute [children=reverse]
+
+Dalam banyak kasus, kita ingin meletakan Element seperti link agar rata kanan menggunakan css, tapi yang css lakukan justru adalah membuat urutan children menjadi terbalik, dengan magic attribute [children=reverse] kita bisa membalik lagi urutan children pada sebuah element.
+
+```html
+<nav children="reverse">
+  <a target="_blank" href="/search_replace_project_edit.php?search_replace_project_id=">Edit</a>
+  <a target="_blank" href="/project_file_rename_recursive.php">Recursive File Rename</a>
+</nav>
+```
+
 # Penutup
-Perlu anda ketahui, bahwa Senimandigital Framework tidak mengandalkan pengalaman dan keterampilan pengguna untuk merancang aplikasi yang mutakhir tapi lebih mengandalkan berbagai tool Desain Visual, attribute yang mungkin bagi anda lihat unik aneh dan tidak standar, sama sekali tidak perlu dihapal.
-Karena yang menghapalnya adalah tool kerja yang anda gunakan, kami menyediakan tool pengembangan khusus untuk menggunakan dan mengembangkan aplikasi menggunakan Senimandigital Framework.
+Perlu anda ketahui, bahwa Senimandigital Framework tidak mengandalkan pengalaman dan keterampilan pengguna untuk merancang aplikasi yang mutakhir tapi lebih mengandalkan berbagai tool Desain Visual, attribute yang mungkin bagi anda terlihat unik, aneh dan tidak standar, sama sekali tidak perlu dihapal.
+Karena yang menghapal-nya adalah tool kerja yang anda gunakan, kami menyediakan tool pengembangan khusus untuk menggunakan dan mengembangkan aplikasi menggunakan Senimandigital Framework.
 
 Ada ribuan kode generator didalam tool pengembangan yang kami sediakan, dimana dengan itu memungkinkan anda membangun system informasi dalam waktu kurang dari satu
-minggu. Kode generator hebat ini akan kami perkenalkan dengan nama Backend behavior dan Frontend Behavior.
+minggu. Kode generator hebat ini akan kami perkenalkan dengan nama "Backend Behavior" dan "Frontend Behavior".
