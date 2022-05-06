@@ -20,9 +20,9 @@ Semua orang sudah menguasai fungsi "mysql" pada PHP, sehingga tidak perlu mempel
 
 # Platform
 
-Senimandigital Framework tidak seperti Framework Populer lain-nya yang di promosikan dengan gencar. Tetapi Senimandigital Framework akan selalu berkembang dan hadir dimana mana. Senimandigital terinsfirasi dari berbagai proyek seperti phpMyAdmin, PHP5, jQuery 1.12.4, Dreamweaver 6.0 dimana mereka semua memiliki persamaan, dan persamaann itu adalah mereka semua merupakan produk yang tidak lekang dimakan usia tidak juga tergerus oleh zaman, tidak pula benar-benar dapat diklasifikasikan kedalam produk yang bisa expired dan mereka semua memiliki ruang kerja tersendiri yang abadi.
+Senimandigital Framework tidak seperti Framework Populer lain-nya yang di promosikan dengan gencar. Tetapi Senimandigital Framework akan selalu berkembang dan hadir dimana mana. Senimandigital terinsfirasi dari berbagai proyek seperti phpMyAdmin, PHP5, jQuery 1.12.4, TinyMCE 2.0.9, Dreamweaver 6.0 dimana mereka semua memiliki persamaan, dan persamaann itu adalah mereka semua merupakan produk yang tidak lekang dimakan usia, tidak juga tergerus oleh zaman, tidak pula benar-benar dapat diklasifikasikan kedalam produk yang bisa expired dan mereka semua memiliki ruang kerja tersendiri yang abadi.
 
-Senimandigital Framework selain desain agar dapat bekerja dengan baik pada Browser Classic maupun Pada Browser Modern, Senimandigital Framework juga didesain untuk Bisa Bekerja dengan Baik pada Platform Webserver lama dan dan webserver keluaran terbaru, semisal bekerja seperti pada:
+Senimandigital Framework selain desain agar dapat bekerja dengan baik pada Browser Classic maupun Pada Browser Modern, Senimandigital Framework juga didesain untuk Bisa Bekerja dengan Baik pada Platform Webserver lama dan webserver keluaran terbaru, semisal bekerja seperti pada:
 1. PHP 5
 2. PHP 7
 3. PHP 8
@@ -34,25 +34,26 @@ Apapun framework-nya, hal pertama yang akan kita lihat tentu saja adalah Arsitek
 
 Senimandigital Framework hanya memiliki 1 file library untuk backend, dan 2 file library untuk Frontend yaitu 1 file css dan 1 file javascript. Satu hal yang pertama perlu anda sadari, bahwa file backend akan berulangkali menginclude diri-nya sendiri secara "recursive" sesuai kebutuhan.
 
-Dalam rangka menginclude dirinya sendiri, Senimandigital Framework sejati-nya melakukan tugas automatisasi:
+Dalam rangka meng-include dirinya sendiri, Senimandigital Framework sejati-nya melakukan tugas automatisasi:
 
 1. **Menyiapkan Library Utama**: Pada tahap pertama, Senimandigital Framework akan menyiapkan Driver untuk aplikasi anda jika itu dibutuhkan, jika driver tidak dibutuhkan maka langkah ini akan dilewati secara otomatis.
 2. **Melakukan Konseksi Ke Database**: Pada tahap kedua, Senimandigital Framework akan melakukan koneksi ke Database dan memeriksa Sessions dan melakukan berbagai tindakan yang dibutuhkan.
 3. **Mempersiapkan Kebutuhan Eksekusi Aplikasi**: File yang menginclude Senimandigital Framework itu adalah file yang akan kita sebut sebagai Aplikasi, pada langkah ke tiga ini Senimandigital Framework akan memeriksa berbagai kebutuhan Library dari Aplikasi yang anda tulis, dan otomatis menyediakan-nya. Sehingga anda sebagai programmer sama sekali tidak perlu lagi memikirkan dan mengincludekan library yang dibutuhkan oleh aplikasi, karena Senimandigital Framework yang akan melakukan-nya untuk anda dan anda hanya cukup fokus untuk mendesain User Interface dan User Experience menggunakan kode HTML.
 4. **Mengeksekusi Aplikasi**: Pada tahapan ini Senimandigital Framework akan mengeksekusi aplikasi yang sudah anda tulis, melakukan semua hal yang memang perlu dilakukan oleh backend, merender kode html dan memanipulasinya terlebih dahulu jika itu diperlukan.
 5. **Mengirimkan Kode HTML ke Browser**: Jika tidak ada lagi yang perlu dilakukan maka Senimandigital Framework akan mengirimkan kode html ke browser.
+6. **Tansformasi Arsitektur dan Mekanisme**: Setelah aplikasi dikirimkan ke browser, Senimandigital Framework belum berhenti bekerja karena saat aplikasi sampai pada browser maka file javascript dari senimandigital Framework yang kemudian mengambil alih dan melanjutkan perkejaan Backend. Apa yang dilakukan oleh file javascrip adalah merekonstruksi arsitektur dan mengaktifkan mekanisme yang diperlukan oleh aplikasi kita.
 
-Jika anda mencermati 5 tahapan diatas, anda pastinya menyadari banyak kejanggalan seperti ada beberapa prosedur yang tampak kurang, benar jika itu yang anda rasakan karena memang ada banyak sekali prosudur yang tidak tertulis pada lima tahapan diatas, tapi memang begitulah adanya, karena posedur yang anda rasa kurang tadi sebenar-nya sudah dilakukan secara otomatis oleh Senimandigital Framework.
+Jika anda mencermati 5 tahapan diatas, anda pasti-nya menyadari banyak kejanggalan seperti ada beberapa prosedur yang tampak kurang, benar jika itu yang anda rasakan karena memang ada banyak sekali prosudur yang tidak tertulis pada lima tahapan diatas, tapi memang begitulah adanya, karena posedur yang anda rasa kurang tadi sebenar-nya sudah dilakukan secara otomatis oleh Senimandigital Framework.
 
 Prosedur standar yang anda kira hilang tadi dan ternyata sudah dituntaskan oleh Senimandigital Framework, maka prosedur-prosedur itulah yang kami sebut sebagai prosedur "Magic Programming".
 
-Lalu apa saja prosedur yang dilakukan secara otomatis oleh Senimandigital Framework, sulit menjabarkannya satu persatu karena jumlah prosedur yang dilakukan secara otomatis Oleh Senimandigital Framework bisa saja jumlah-nya ada puluhan ribu mekanisme. Tapi disini akan kita rangkum sedikit, terutama untuk bagian-bagian yang mudah untuk anda pahami:
+Lalu apa saja prosedur yang dilakukan secara otomatis oleh Senimandigital Framework, sulit menjabarkan-nya satu persatu karena jumlah prosedur yang dilakukan secara otomatis Oleh Senimandigital Framework bisa saja jumlah-nya ada ribuan mekanisme. Tapi disini akan kita rangkum sedikit, terutama untuk bagian-bagian yang mudah untuk anda pahami:
 
 1. Otomatis menyediakan Library Frontend Framework, Ketika aplikasi anda membutuhkan jQuery maka library jQuery akan diload secara otomatis, ketika aplikasi anda membutuhkan Angular, Vue, React, Leaflet, TinyMCE, CodeMirror dan ribuan plugins javascript lain-nya, maka library tersebut akan disiapkan secara otomatis. Benar, seperti yang anda pikirkan jika anda berpikir Senimandigital Framework sangat Cerdas untuk mampu menyiapkan semua Library yang dibutuhkan oleh aplikasi yang anda tulis, padahal anda hanya menulis kode html.
 
 Apakah anda mulai berpikir bahwa kinerja dan performa aplikasi ini akan terasa buruk karena melakukan berbagai proses automatisasi dibelakang layar, anda boleh saja mengira begitu jika anda belum menggunakan Senimandigital Framework, tapi jika anda sudah menggunakannya, maka anda akan tahu bahwa kinerja Senimandigital Framework ternyata tidak lebih buruk dari Framework populer lain-nya, bahkan anda akan mengakui bahwa kinerja Senimandigital Framework ternyata masih jauh lebih baik dari berbagai kinerja Framework Populer lain-nya, padahal Senimandigital Framework sama sekali belum mengaktifkan fitur Cache.
 
-Kenapa bisa seperti itu, bukankah automatisasi seharusnya membutuhkan banyak resource, bagaimana Senimandigital Framework melakukannya tanpa mengorbankan performa aplikasi bahkan kinerja aplikasi masih mampu setara dengan aplikasi PHP Native lain-nya. Satu hal yang bisa kami katakan Senimandigital Framework menerapkan "Artificial Intelegence" dan fokus hanya menghandle "the true condition" dimana segala sesuatu yang tidak sesuai akan otomatis diabaikan dan tidak akan memicu proses apapun.
+Kenapa bisa seperti itu, bukankah automatisasi seharus-nya membutuhkan banyak resource, bagaimana Senimandigital Framework melakukan-nya tanpa mengorbankan performa aplikasi bahkan kinerja aplikasi masih mampu setara dengan aplikasi PHP Native lain-nya. Satu hal yang bisa kami katakan Senimandigital Framework menerapkan "Artificial Intelegence" dan fokus hanya menghandle "the true condition" dimana segala sesuatu yang tidak sesuai akan otomatis diabaikan dan tidak akan memicu proses apapun.
 
 Lalu bagaimana dengan memori, bukankah itu konsep automatisasi ini juga akan menguras memory... ? sama sekali tidak seperti itu, karena senimandigital Framework tidak memutar-mutar resource seperti apa yang dilakukan kebanyakan Framework dan Aplikasi Populer diluarsana. Senimandigital ditulis untuk menggunakan memori secara optimal dan menggunakan-nya secara berulang. Sehingga pemakaian memori dapat terus dioptimakan karena selalu ditekan pada angka terendah.
 
@@ -60,7 +61,7 @@ Lalu bagaimana dengan memori, bukankah itu konsep automatisasi ini juga akan men
 
 Struktur database menentukan tingkat optimalisasi pemroses, struktur database yang optimal meminimalisasi kebutuhan Join antar Tabel. 
 Contoh: kita bisa saja membuat tabel "account" dan membuat tabel "account_level", tapi kita tidak melakukan itu, 
-karena jauh lebih baik untuk membuat satu tabel, dengan menambahkan sebuah field dengan nama "account_group" dan mendefinisikannya dengan "type" data "enum".
+karena jauh lebih baik untuk membuat satu tabel, dengan menambahkan sebuah field dengan nama "account_group" dan mendefinisikan-nya dengan "type" data "enum".
 sedangkan untuk hierarki-nya kita membuat data dengan karakter pembatas: "/" sehingga data didalamya akan menjadi seperti:
 
 1. administrator
@@ -79,15 +80,19 @@ Dengan penamaan level akses seperti diatas, kita bisa langsung menyimpan nilai l
 ```
 $_SESSION['account_group'] = 'administrator'
 ```
-Dengan nilai level akses pada seesion, kita bisa langgung menggunakan nilai tersebut untuk mengarahkannya pada file php yang sesuai, contoh:
+Dengan nilai level akses pada seesion, kita bisa langgung menggunakan nilai tersebut untuk mengarahkan-nya pada file php yang sesuai, contoh:
 ```
 include $_SESSION['account_group'] .'/index.php';
 ```
-Dengan cara ini, kita tidak perlu lagi memikirkan tentang "route" apalagi sama membuang-buang waktu untuk mengembangkan algoritma-nya dan menyia-nyiakan resoure untuk memproses-nya, karena arsitektur dan mekanisme untuk route-nya sudah terbentuk secara alami.
+Dengan cara ini, kita tidak perlu lagi memikirkan tentang "route" seperti yang biasa dilakukan apabila kita mengembangkan aplikasi menggunakan framework, tidak perlu di-pertanyakan lagi memproses sebuah file "route" tentu saja membutuhkan "RAM" tambahan, itu baru tambahan satu file route belum lagi jika kita membahas library lain. 
+
+Kami tidak menyalahkan ada orang-orang yang mengembangkan framework, tentu saja itu adalah hal yang bagus, apalagi jika mereka berhasil mengembangkan komunitas yang besar itu tentu saja adalah hal yang luar biasa.
+
+Apa yang kami tidak suka dari Framework adalah, rata-rata framework mengembangkan platform baru dibawah platform lama dan bukan mengoptimalkan apa yang sudah ada. Menurut kami pengembang framework lebih banyak membuang-buang waktu untuk mengembangkan algoritma-nya dan menyia-nyiakan resoure untuk memproses-nya, karena arsitektur dan mekanisme semisal untuk "route" tadi yang sebenar-nya sudah terbentuk secara alami bahkan webserver seperti PHP misalnya sudah bisa melakukan-nya dengan file .htaccess jika kita berbicara secara jujur maka kita lebih butuh aplikasi Visual Manajemen untuk mengelola content dari file .htaccess daripada harus membuang waktu mempelajari framework baru.
 
 ### Konsep Desain Struktur Database "Optimal", "Global"
 
-Penjelasan ringan diatas, itu hanya contoh, dalam praktek-nya kami menerapkan konsep yang jauh lebih optimal lagi, yaitu: dengan mengganti tabel "account_group" dengan tabel "classification" dimana tabel  "classification" ini menampung semua data yang memiliki karakteristik klasifikasi untuk menggantikan keberadaan beberapa tabel, seperti tabel:
+Penjelasan ringan diatas, itu hanya contoh, dalam praktek-nya disemua aspek kami menerapkan konsep yang jauh lebih optimal lagi, yaitu: dengan mengganti tabel "account_group" dengan tabel "classification" dimana tabel  "classification" ini menampung semua data yang memiliki karakteristik klasifikasi untuk menggantikan keberadaan beberapa tabel, seperti tabel:
 
 1. account_group
 2. account_status
@@ -104,18 +109,23 @@ Sehingga tidak ada alasan untuk mengatakan bahwa dalam hal ini tabel classificat
 
 ### Magic Configuration
 
-Apa yang disebut dengan magic Configuration adalah, sebuah file konfigurasi yang datanya bisa langsung di include tanpa perlu dipasing, adakah yang seperti itu... ? tentu saja ada, di php kita sudah mengenal fungsi var_export. Kita hanya perlu menggunakan-nya ketika akan menulis konfigurasi kedalam sebuah file. Ketika ingin menggunakan-nya, kita hanya perlu menginclude file tadi dan menampung nilai-nya pada variabel yang kita inginkan.
+Apa yang disebut dengan magic Configuration adalah, sebuah file konfigurasi yang data-nya bisa langsung di include tanpa perlu dipasing, adakah yang seperti itu... ? tentu saja ada, di PHP kita sudah mengenal fungsi var_export. Kita hanya perlu menggunakan-nya ketika akan menulis konfigurasi kedalam sebuah file. Ketika ingin menggunakan-nya, kita hanya perlu menginclude file tadi dan menampung nilai-nya pada variabel yang kita inginkan.
+
+Bandingkan dengan Laravel misal-nya yang membuat standar format baru hanya untuk menampung nilai konfigurasi ini jelas merupakan langkah yang sia-sia, padahal sudah ada function var_dump yang always ready. Kita tidak akan membahas lebih jauh penyimpangan yang dilakukan kebanyakan framework, lagipula mereka memiliki tujuan-nya tersendiri yaitu menyetandar-kan penulisan kode program Opensource.
+
+Benar semua framework sedang berusaha membuat penyetandarkan dalam penulisan kode program dimana penamaan function dibuat serupa dengan Framework yang ditulis menggunakan bahasa pemrograman lain, dengan adalanya pen-standard-an seperti itu bisa saja dimasa depan aplikasi yang kita tulis menggunakan framework pada bahasa pemrogaman php bisa kita pakai ulang dengan sedikit kosumasi ketika kita memutuskan untuk berpindah menggunakan bahasa pemrograman python.
 
 ### Frontend Framework
+
 #### jQuery
 Kita menggunakan jQuery Versi 1, dengan alasan fleksibelitas. jQuery 1.12.4 masih dapat bekerja dengan Browser lawas,
 yang arti-nya jQuery masih bisa bekerja pada browser bawaan aplikasi seperti Visual Basic.
-Pertimbangan kami daripada harus mempelajari bahkan mengembangkan jQuery Versi terbaru yang tidak bisa bekerja pada browser lawas, masih lebih baik mempelajari jQuery Versi 1.12.4.
+Pertimbangan kami, daripada harus mempelajari bahkan mengembangkan jQuery Versi terbaru yang tidak bisa bekerja pada browser lawas, masih lebih baik mempelajari jQuery Versi 1.12.4 dan menambahkan beberapa subset yang dibutuhkan.
 
-Yang perlu anda ketahui versi terakhir untuk jQuery versi 1 adalah jQuery 1.12.4, kami tidak hanya menggunakan jQuery Versi 1.12.4 secara apa adanya, tapi kami memperbaharui jQuery Versi 1.12.4 dan memberi-nya label dengan kode Versi 1.12.5.
+Yang perlu anda ketahui versi terakhir untuk jQuery versi 1 adalah jQuery 1.12.4, kami tidak hanya menggunakan jQuery Versi 1.12.4 secara apa ada-nya, tapi kami memperbaharui jQuery Versi 1.12.4 dan memberi-nya label dengan kode Versi 1.12.5.
 
 #### Spry
-Frontend Fraamework Spry memang tidak berkembang, namun tidak buruk juga untuk dipakai setidaknya setelah menggunakan Spry kita bisa berpindah ke Vue dimasa yang akan datang. Yang terpenting, dengan Spry kita bisa mengembangkan aplikasi Secara Visual, Drag n Drop. Kita tentu saja tidak menggunakan Spry secara apa adanya, tapi juga melakukan kostumasi secara extrem
+Frontend Fraamework Spry memang tidak berkembang, namun tidak buruk juga untuk dipakai setidak-nya setelah menggunakan Spry kita bisa berpindah ke Vue dimasa yang akan datang. Yang terpenting, dengan Spry kita bisa mengembangkan aplikasi Secara Visual, Drag n Drop. Kita tentu saja tidak menggunakan Spry secara apa adanya, tapi juga melakukan kostumasi secara extreme.
 
 #### Magic JS
 Jika anda tau Bootstrap, kami setuju itu bagus dan sangat membantu kita dalam mendesain aplikasi. Tapi kita selalu butuh sesuatu yang Kurang dan Lebih dari itu ketika membangun aplikasi.
@@ -129,7 +139,7 @@ Dalam Magic JS, attribute "role" tidak hanya di handle oleh Javascript tapi juga
 misal anda menggunakan Framework jQuery untuk membuat tab anda hanya perlu membuat list seperti biasa namun dengan tambahan atribute role="tabs"
 anda tidak perlu menuliskan script include jQuery dan css yang diperlukan, karena php yang akan melakukan-nya.
 
-Hal seperti ini adalah sesuatu yang sangat kami impikan, dan belum ada Frontend Framework lain yang kami dapati melakukan-nya.
+Hal seperti ini adalah sesuatu yang sangat kami impikan, dan belum ada Frontend Framework lain yang kami dapati melakukan-nya, maka dari itu Senimandigital Framework hadir untuk mengisi ruang kosong tersebut.
 
 ## Resiko Penolakan, Tanggapan dan Antisipasinya
 Senimandigital Framework meskipun sudah dikembangkan selama lebih dari 10 Tahun, tapi selama itu Senimandigital Framework bukanlah Opensource sehingga konsep dari Senimandigital Framework masih merupakan hal baru dan perlu waktu untuk pihak luar untuk menguji-nya. Sehingga sangat mungkin Senimandigital Framework akan menerima berbagai penolakan, dengan berbagai alasan:
@@ -138,3 +148,7 @@ Senimandigital Framework meskipun sudah dikembangkan selama lebih dari 10 Tahun,
 2. Waktu kerja, Untuk membuat system informasi yang umum seperti: System Informasi Manajemen Perpustakaan, System Informasi Manajemen Toko, System Informasi Manajemen Gudang, System Informasi Manajemen Asset ideal-nya adalah 5 hari kerja.
 3. Cara kerja, Ketika menggunakan Senimandigital Framework programmer hanya perlu fokus untuk membuat database menggunakan tool database yang sudah disediakan, dengan waktu penuntasan kerja mulai dari 1 hingga 8 jam kerja. Sedangkan ketika untuk membuat aplikasi, programmer hanya perlu membuat kode html menggunakan tool yang juga sudah disediakan, dari awal hingga tuntas akan membutuhkan 1 - 4 hari kerja, tergantung seberapa banyak modul dan level akses user yang akan dibuat, untuk membuat satu aplikasi/modul akan membutuhkan waktu 5 hingga 15 menit yang artinya dalam 1 jam programmer akan dapat membuat hingga 12 modul/aplikasi.
 4. Biaya Jasa, senimandigital mewajibkan pengguna untuk memasarkan produk yang dibuat minimal dengan harga Rp. 7.500.000,00 hanya dengan cara ini anda dapat menyewa aplikasi dan jasa kami dengan biaya 10 - 40% dari nilai proyek. Dengan menggunakan Layanan Teknologi secara full fitur dan bekingan langsung dari pihak kami maka target waktu belajar, waktu kerja dan cara kerja seperti disebutkan pada point-point sebelum-nya akan lebih menjanjikan untuk terealisasikan. Baik anda adalah pengguna Junior. bahkan jika anda pengguna Senior sekalipun, bekingan dari kami pastinya masih akan sangat membuat anda merasa terbantu.
+
+## Teknologi Pendukung
+
+Senimandigital belajar dari Framework Dreamweaver, Dimana Framework Dreamweaver hadir tidak dengan sendiri-nya tapi dengan teknologi pendukung yaitu Aplikasi Dreamweaver yang sudah sangat kita kenal nama besar-nya. Setiap pengguna Dreamweaver Framework kemungkinan tidak menyadari bahwa mereka sebenar-nya menggunakan Dreamweaver Framework. Sesorang yang sudah menguasai 10 Besar Framework Populer tentu saja akan bertanya-tanya sebagus apakah sebenar-nya Dramweaver Framework dan bisakah menandingi CodeIgniter atau bahkan Laravel... ? dan jawabanya pasti tidak jika kita hanya melihat dari sudut pandang "Arsitektur" dan "Mekanisme" tetapi jika kita melihat dari sudut pandang aplikasi yang dihasilkan, maka Framework Dreamweaver memiliki potensi keunggulan yang lauh lebih banyak dan belum ada satupun Framework Populer yang saat ini mampu mengejar itu.
