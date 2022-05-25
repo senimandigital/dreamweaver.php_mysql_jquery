@@ -58,6 +58,44 @@ Ketika anda menulis kode program seperti diatas, maka pada browser kode program 
 Attribute ID akan otomatis ditambahkan ke element, apabila tidak terdapat attribute ID pada element, dimana attribute \[id\] akan disamakan dengan attribut \[name\].
 Dengan automatisasi ini, anda bisa menyelesaikan pembuatan ribuan Element dengan lebih cepat, dan tentu saja cara ini akan menghemat ukuran ruang yang terpakai pada hosting/VPS tidak hanya itu Clean Code ini juga secara nyata menghemat bandwidth yang digunakan untuk transfer data antara Server dan Client.
 
+## Auto Append To Option Group
+Ketika membuat aplikasi kita sering kali kali berurusan dengan element select, element select memiliki fasilitas bawaan untuk mengatut option kedalam tampilan group. Kita bisa saja menggunakan pemroses backend untuk melakukan pengelompokan data kedalam group, tapi jelas itu akan menguras resource server, daripada harus memprosesnya di backend, ketika menggunakan framework senimandigital kita cukup membuat element select seperti contoh ini:
+```htm
+<select name="platform_contribution_practice" value="use">
+  <option>-- Pilih platform_contribution_practice --</option>
+  <optgroup group="enginer" label="enginer"> </optgroup>
+  <optgroup group="user" label="user"> </optgroup>
+  <optgroup group="vendor" label="vendor"> </optgroup>
+  <option optgroup="user" value="use">Use</option>
+  <option optgroup="user" value="tutorial" >Tutorial</option>
+  <option optgroup="user" value="tips_and_trick" >Tips And Trick</option>
+  <option optgroup="enginer" value="engineering_library">Engineering Library</option>
+  <option optgroup="enginer" value="engineering_component">Engineering Component</option>
+  <option optgroup="vendor" value="vendor package library">Vendor package library</option>
+  <option optgroup="vendor" value="vendor package component">Vendor package component</option>
+</select>
+```
+Ketika sampai di browser, magic.js akan merekonstruksi ulang elemen select sehingga menjadi seperti ini:
+```htm
+<select name="platform_contribution_practice" id="platform_contribution_practice" value="use">
+  <option>-- Pilih platform_contribution_practice --</option>
+  <optgroup group="enginer" label="enginer">
+    <option value="engineering_library">Engineering Library</option>
+    <option value="engineering_component">Engineering Component</option>
+  </optgroup>
+  <optgroup group="user" label="user">
+    <option value="use" selected="true">Use</option>
+    <option value="tutorial">Tutorial</option>
+    <option value="tips_and_trick">Tips And Trick</option>
+  </optgroup>
+  <optgroup group="vendor" label="vendor">
+   <option value="vendor package library">Vendor package library</option>
+   <option value="vendor package component">Vendor package component</option>
+  </optgroup>
+</select>
+```
+Dengan cara ini yang bekerja untuk memproses element adalah komputer klient/browser sehingga resource server tidak terkuras.
+
 ## Auto Synchrone Title/Tooltip
 Anda bisa mendefinisikan attribute title pada label, maka title akan di synkronkan secara otomatis ke element input yang terelasi.
 ```html
